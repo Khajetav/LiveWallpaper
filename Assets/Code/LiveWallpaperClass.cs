@@ -12,7 +12,12 @@ public class LiveWallpaperClass : MonoBehaviour
 
     public void SetWallpaper()
     {
-        activity.CallStatic("SetWallpaper");
         SceneManager.LoadScene("Animated");
+        activity.CallStatic("SetWallpaper");
+    }
+
+    public void BackToTheMenu()
+    {
+        SceneManager.LoadScene("Main");
     }
 }
