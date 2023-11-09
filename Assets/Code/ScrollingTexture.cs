@@ -8,9 +8,9 @@ public class ScrollingTexture : MonoBehaviour
     [SerializeField] private List<Transform> middlegroundList;
     [SerializeField] private List<Transform> foregroundList;
     [SerializeField] private List<Transform> accessoryList;
-    private float scrollSpeedBackground = 0.2f;
+    private float scrollSpeedBackground = 0.1f;
     private float scrollSpeedMiddleground = 0.35f;
-    private float scrollSpeedForeground = 0.5f;
+    private float scrollSpeedForeground = 1.75f;
     private Vector2 leftSide;
     private Vector2 rightSide;
 
