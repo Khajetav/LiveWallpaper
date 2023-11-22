@@ -10,6 +10,10 @@ public class LiveWallpaperClass : MonoBehaviour
     void Update()
     {
         WallpaperHasBeenSet = PlayerPrefs.GetInt("MyBool") == 1;
+        #if DEBUG
+        WallpaperHasBeenSet = false;
+
+        #endif
         string currentSceneName = SceneManager.GetActiveScene().name;
         if (currentSceneName == "Animated")
         {
