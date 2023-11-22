@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BackgroundObjectHandler : MonoBehaviour
 {
@@ -11,17 +13,22 @@ public class BackgroundObjectHandler : MonoBehaviour
     public GameObject mountainParent;
     public GameObject cloudParent;
     Queue<GameObject> cloudQueue = new Queue<GameObject> ();
+    public List<Texture> cloudSprites = new List<Texture> ();
     Queue<GameObject> mountainQueue = new Queue<GameObject> ();
-    private float cloudSpawnFrequency = 4f;
-    private float cloudSpeed = 1f;
-    private float mountainSpawnFrequency = 5f;
-    private float mountainSpeed = 10f;
+    private float cloudSpawnFrequency = 8f;
+    private float cloudSpeed = 0.5f;
+    private float mountainSpawnFrequency = 120f;
+    private float mountainSpeed = 0.02f;
 
     void Start()
     {
         // InvokeRepeating is like Update, begins from 0 and spawns objects according to spawnFrequency
-        InvokeRepeating("SpawnCloud", 0, cloudSpawnFrequency);
+        Invoke("SpawnCloud",0);
         InvokeRepeating("SpawnMountain", 0, mountainSpawnFrequency);
+        GameObject mountain = (Instantiate(mountainList[0], new Vector3(0, 0, 0), Quaternion.identity));
+        mountain.transform.SetParent(mountainParent.transform, false);
+        mountain.transform.Translate(new Vector3(4, 0, 0));
+        mountainQueue.Enqueue(mountain);
     }
     
     void SpawnMountain()
@@ -36,7 +43,7 @@ public class BackgroundObjectHandler : MonoBehaviour
     void SpawnCloud()
     {
         // Picks a random object from the cloudsList;
-        int randCloud = UnityEngine.Random.Range(0, cloudsList.Length);
+        int randCloud = UnityEngine.Random.Range(0, cloudSprites.Count);
 
 
         // Initialises an object to the scene.
@@ -45,13 +52,17 @@ public class BackgroundObjectHandler : MonoBehaviour
         // Quaternion.identity is responsible for rotation? idk
         
         // spawns a cloud
-        GameObject cloud = (Instantiate(cloudsList[randCloud], new Vector3(12, UnityEngine.Random.Range(4f, 8f), 0), Quaternion.identity));
+        GameObject cloud = (Instantiate(cloudsList[0], new Vector3(12, UnityEngine.Random.Range(4f, 8f), 0), Quaternion.identity));
         cloud.transform.SetParent(cloudParent.transform, false);
         cloud.transform.Translate(new Vector3(10, UnityEngine.Random.Range(4f, 8f), 0));
+        // Change the sprite of the cloud
+        RawImage rawImage = cloud.GetComponent<RawImage>();
+        if (rawImage != null)
+        {
+            rawImage.texture = cloudSprites[randCloud];
+        }
         cloudQueue.Enqueue(cloud);
-
-
-
+        Invoke("SpawnCloud", UnityEngine.Random.Range(2f, 8f));
     }
     void Update()
     {
