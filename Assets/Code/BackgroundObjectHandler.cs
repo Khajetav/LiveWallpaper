@@ -7,37 +7,72 @@ using UnityEngine.UI;
 public class BackgroundObjectHandler : MonoBehaviour
 {
 
-    public GameObject[] cloudsList;
-    public GameObject[] mountainList;
-    public GameObject mountainParent;
+    public GameObject cloudObject;
     public GameObject cloudParent;
     Queue<GameObject> cloudQueue = new Queue<GameObject> ();
     public List<Texture> cloudSprites = new List<Texture> ();
+    
+    public GameObject mountainObject;
+    public GameObject mountainParent;
     Queue<GameObject> mountainQueue = new Queue<GameObject> ();
-    private float cloudSpawnFrequency = 8f;
+
+    public GameObject treeParent;
+    public GameObject treeObject;
+    Queue<GameObject> treeQueue = new Queue<GameObject> ();
+    public List<Texture> treeSprites = new List<Texture> ();
+    
     private float cloudSpeed = 0.5f;
     private float mountainSpawnFrequency = 120f;
     private float mountainSpeed = 0.02f;
+    private float treeSpeed = 0.125f;
 
     void Start()
     {
         // InvokeRepeating is like Update, begins from 0 and spawns objects according to spawnFrequency
         Invoke("SpawnCloud",0);
+        Invoke("SpawnTree",0);
         InvokeRepeating("SpawnMountain", 0, mountainSpawnFrequency);
-        GameObject mountain = (Instantiate(mountainList[0], new Vector3(0, 0, 0), Quaternion.identity));
+        GameObject mountain = (Instantiate(mountainObject, new Vector3(0, 0, 0), Quaternion.identity));
         mountain.transform.SetParent(mountainParent.transform, false);
         mountain.transform.Translate(new Vector3(4, 0, 0));
         mountainQueue.Enqueue(mountain);
+        GameObject tree = (Instantiate(treeObject, new Vector3(0, 0, 0), Quaternion.identity));
+        tree.transform.SetParent(treeParent.transform, false);
+        tree.transform.Translate(new Vector3(0, 0, 0));
+        treeQueue.Enqueue(tree);
     }
-    
+
     void SpawnMountain()
     {
         // spawns a mountain
-        int randMount = UnityEngine.Random.Range(0, mountainList.Length);
-        GameObject mountain = (Instantiate(mountainList[randMount], new Vector3(30, 0, 0), Quaternion.identity));
+        GameObject mountain = (Instantiate(mountainObject, new Vector3(30, 0, 0), Quaternion.identity));
         mountain.transform.SetParent(mountainParent.transform, false);
         mountain.transform.Translate(new Vector3(40, 0, 0));
         mountainQueue.Enqueue(mountain);
+    }
+    void SpawnTree()
+    { 
+        // Picks a random object from the cloudsList;
+        int randTree = UnityEngine.Random.Range(0, treeSprites.Count);
+
+
+        // Initialises an object to the scene.
+        // selects a cloud from the list according to the random ID
+        // sets the height of it (new Vector3) - x,y,z
+        // Quaternion.identity is responsible for rotation? idk
+
+        // spawns a cloud
+        GameObject tree = (Instantiate(treeObject, new Vector3(12, UnityEngine.Random.Range(4f, 8f), 0), Quaternion.identity));
+        tree.transform.SetParent(treeParent.transform, false);
+        tree.transform.Translate(new Vector3(10, UnityEngine.Random.Range(0f, 0.1f), 0));
+        // Change the sprite of the cloud
+        RawImage rawImage = tree.GetComponent<RawImage>();
+        if (rawImage != null)
+        {
+            rawImage.texture = treeSprites[randTree];
+        }
+        treeQueue.Enqueue(tree);
+        Invoke("SpawnTree", UnityEngine.Random.Range(20f, 80f));
     }
     void SpawnCloud()
     {
@@ -51,7 +86,7 @@ public class BackgroundObjectHandler : MonoBehaviour
         // Quaternion.identity is responsible for rotation? idk
         
         // spawns a cloud
-        GameObject cloud = (Instantiate(cloudsList[0], new Vector3(12, UnityEngine.Random.Range(4f, 8f), 0), Quaternion.identity));
+        GameObject cloud = (Instantiate(cloudObject, new Vector3(12, UnityEngine.Random.Range(4f, 8f), 0), Quaternion.identity));
         cloud.transform.SetParent(cloudParent.transform, false);
         cloud.transform.Translate(new Vector3(10, UnityEngine.Random.Range(4f, 8f), 0));
         // Change the sprite of the cloud
@@ -61,7 +96,7 @@ public class BackgroundObjectHandler : MonoBehaviour
             rawImage.texture = cloudSprites[randCloud];
         }
         cloudQueue.Enqueue(cloud);
-        Invoke("SpawnCloud", UnityEngine.Random.Range(2f, 8f));
+        Invoke("SpawnCloud", UnityEngine.Random.Range(4f, 16f));
     }
     void Update()
     {
@@ -89,6 +124,19 @@ public class BackgroundObjectHandler : MonoBehaviour
             {
                 mountainQueue.Dequeue();
                 Destroy(topMountain);
+            }
+        }
+        foreach (var tree in treeQueue)
+        {
+            tree.transform.Translate(Vector3.left * treeSpeed * Time.deltaTime);
+        }
+        if (treeQueue.Count > 0)
+        {
+            GameObject topTree = treeQueue.Peek();
+            if (topTree.transform.position.x < -15f)
+            {
+                treeQueue.Dequeue();
+                Destroy(topTree);
             }
         }
     }
