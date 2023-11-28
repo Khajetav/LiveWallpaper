@@ -1,18 +1,36 @@
 fileFormatVersion: 2
 guid: fa452aa2ed147db4ab523c7e24fcd567
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: PetTurtleBlinkingAnimation_0
-    21300002: PetTurtleBlinkingAnimation_1
-    21300004: PetTurtleBlinkingAnimation_2
-    21300006: PetTurtleBlinkingAnimation_3
-    21300008: PetTurtleBlinkingAnimation_4
-    21300010: PetTurtleBlinkingAnimation_5
-    21300012: PetTurtleBlinkingAnimation_6
-    21300014: PetTurtleBlinkingAnimation_7
-    21300016: PetTurtleBlinkingAnimation_8
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: PetTurtleBlinkingAnimation_0
+  - first:
+      213: 21300002
+    second: PetTurtleBlinkingAnimation_1
+  - first:
+      213: 21300004
+    second: PetTurtleBlinkingAnimation_2
+  - first:
+      213: 21300006
+    second: PetTurtleBlinkingAnimation_3
+  - first:
+      213: 21300008
+    second: PetTurtleBlinkingAnimation_4
+  - first:
+      213: 21300010
+    second: PetTurtleBlinkingAnimation_5
+  - first:
+      213: 21300012
+    second: PetTurtleBlinkingAnimation_6
+  - first:
+      213: 21300014
+    second: PetTurtleBlinkingAnimation_7
+  - first:
+      213: 21300016
+    second: PetTurtleBlinkingAnimation_8
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -29,9 +47,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -41,11 +62,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,11 +84,17 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -77,7 +104,61 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 4
+    buildTarget: Win
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -97,56 +178,97 @@ TextureImporter:
       tessellationDetail: 0
       bones:
       - name: root
+        guid: 
         position: {x: 433.37183, y: 35.031128, z: 0}
         rotation: {x: 0, y: 0, z: 0.76302004, w: 0.6463749}
         length: 184.55563
         parentId: -1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_2
+        guid: 
         position: {x: 184.55539, y: 0.00004039589, z: 0}
         rotation: {x: 0, y: 0, z: -0.88030165, w: 0.47441438}
         length: 262.1623
         parentId: 0
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_3
+        guid: 
         position: {x: 262.1622, y: -0.00012759464, z: 0}
         rotation: {x: 0, y: 0, z: 0.9903017, w: 0.13893335}
         length: 359.7265
         parentId: 1
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_4
+        guid: 
         position: {x: 359.72678, y: -0.00008470469, z: 0}
         rotation: {x: 0, y: 0, z: 0.5654989, w: 0.82474905}
         length: 350.39267
         parentId: 2
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_5
+        guid: 
         position: {x: 350.39258, y: -0.00024826633, z: 0}
         rotation: {x: 0, y: 0, z: 0.99935406, w: 0.035937633}
         length: 324.43314
         parentId: 3
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_6
+        guid: 
         position: {x: 324.4331, y: -0.000064587584, z: 0}
         rotation: {x: 0, y: 0, z: -0.95787483, w: 0.28718606}
         length: 271.12143
         parentId: 4
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_7
+        guid: 
         position: {x: 271.12122, y: -0.00010953939, z: 0}
         rotation: {x: 0, y: 0, z: 0.99116766, w: 0.13261484}
         length: 249.0159
         parentId: 5
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_8
+        guid: 
         position: {x: 249.01564, y: -0.00015201002, z: 0}
         rotation: {x: 0, y: 0, z: -0.9171473, w: 0.39854848}
         length: 21.23876
         parentId: 6
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_9
+        guid: 
         position: {x: 21.23877, y: 0.000004438762, z: 0}
         rotation: {x: 0, y: 0, z: 0.22977245, w: 0.97324437}
         length: 6.78422
         parentId: 7
+        color:
+          serializedVersion: 2
+          rgba: 0
       - name: bone_10
+        guid: 
         position: {x: 6.784108, y: 0.00019102142, z: 0}
         rotation: {x: 0, y: 0, z: 0, w: 1}
         length: 0
         parentId: 8
+        color:
+          serializedVersion: 2
+          rgba: 0
       spriteID: efc818f1add5775409102baa6c1a017f
+      internalID: 21300000
       vertices:
       - {x: 428, y: 412}
       - {x: 400.4088, y: 198.5122}
@@ -177,110 +299,110 @@ TextureImporter:
       - {x: 11, y: 12}
       - {x: 12, y: 0}
       weights:
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
-      - weight[0]: 0
-        weight[1]: 0
-        weight[2]: 0
-        weight[3]: 0
-        boneIndex[0]: 0
-        boneIndex[1]: 0
-        boneIndex[2]: 0
-        boneIndex[3]: 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
+      - 'weight[0]': 0
+        'weight[1]': 0
+        'weight[2]': 0
+        'weight[3]': 0
+        'boneIndex[0]': 0
+        'boneIndex[1]': 0
+        'boneIndex[2]': 0
+        'boneIndex[3]': 0
     - serializedVersion: 2
       name: PetTurtleBlinkingAnimation_1
       rect:
@@ -297,6 +419,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9c5100b5629b05a4bb85f4832708c499
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -317,6 +440,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d1cdf873381deee4782ee7d538cd0d59
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -337,6 +461,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2a78dc56f085b1848bbf6f22fa0bf9e9
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -357,6 +482,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1006577f6c749f64b8a99ddbff93f681
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -377,6 +503,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1313ca8372e1270499101e74a0476150
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -397,6 +524,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3221abd163d26084782bfe1b5e2a9ab1
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -417,6 +545,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 34148de129edd874091e5ac7fff0ecc8
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -437,6 +566,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 95cb3b3a80ae55e4094e425620065d16
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -445,13 +575,24 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: d64edabec0ffb974aa8d030b59946c3b
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-  spritePackingTag: 
+    secondaryTextures: []
+    nameFileIdTable:
+      PetTurtleBlinkingAnimation_0: 21300000
+      PetTurtleBlinkingAnimation_1: 21300002
+      PetTurtleBlinkingAnimation_2: 21300004
+      PetTurtleBlinkingAnimation_3: 21300006
+      PetTurtleBlinkingAnimation_4: 21300008
+      PetTurtleBlinkingAnimation_5: 21300010
+      PetTurtleBlinkingAnimation_6: 21300012
+      PetTurtleBlinkingAnimation_7: 21300014
+      PetTurtleBlinkingAnimation_8: 21300016
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
