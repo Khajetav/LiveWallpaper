@@ -4,33 +4,25 @@ using UnityEngine.UI;
 
 public class LiveWallpaperClass : MonoBehaviour
 {
-    private AndroidJavaClass activity;
-    private Text textField;
     private bool WallpaperHasBeenSet;
     void Update()
     {
         WallpaperHasBeenSet = PlayerPrefs.GetInt("MyBool") == 1;
         #if DEBUG
-        WallpaperHasBeenSet = false;
+        //  WallpaperHasBeenSet = false;
 
         #endif
         string currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "Animated")
-        {
-            textField = GameObject.Find("ACTStateText").GetComponent<Text>();
-            textField.text = GetACTState() + " " + WallpaperHasBeenSet;
-
-        }
         if (currentSceneName != "Main")
         {
-            if (WallpaperHasBeenSet && GetACTState() || !WallpaperHasBeenSet && GetACTState())
+            if (WallpaperHasBeenSet && GetWallpaperState() || !WallpaperHasBeenSet && GetWallpaperState())
             {
                 SceneManager.LoadScene("Main");
             }
         }
         if (currentSceneName != "Animated")
         {
-            if (WallpaperHasBeenSet && !GetACTState())
+            if (WallpaperHasBeenSet && !GetWallpaperState())
             {
                 SceneManager.LoadScene("Animated");
             }
@@ -38,13 +30,15 @@ public class LiveWallpaperClass : MonoBehaviour
     }
     void Start()
     {
-
-        activity = new AndroidJavaClass("lwp.UnityPlayerActivity");
     }
 
     public void SetWallpaper()
     {
-        activity.CallStatic("SetWallpaper");
+        using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+        {
+            AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+            activity.Call("SetWallpaper");
+        }
         WallpaperHasBeenSet = true;
         PlayerPrefs.SetInt("MyBool", WallpaperHasBeenSet ? 1 : 0);
 
@@ -54,19 +48,11 @@ public class LiveWallpaperClass : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
-    public bool GetACTState()
+    public bool GetWallpaperState()
     {
-        bool actState = false;
-
-        // Create an AndroidJavaClass object for your App class
-        AndroidJavaClass appClass = new AndroidJavaClass("lwp.App");
-
-        if (appClass != null)
+        using (var unityPlayerSingletonClass = new AndroidJavaClass("kavukava.LiveWallpaper.UnityPlayerSingleton"))
         {
-            // Use AndroidJavaClass to access the static variable ACT
-            actState = appClass.GetStatic<bool>("ACT");
+            return unityPlayerSingletonClass.GetStatic<bool>("WallpaperVisible");
         }
-
-        return actState;
     }
 }
