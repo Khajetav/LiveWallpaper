@@ -34,14 +34,13 @@ public class AuthenticationScript : MonoBehaviour
             await AuthenticationService.Instance.SignInAnonymouslyAsync();
             print("Sign in was a success");
             print("Player ID: " + AuthenticationService.Instance.PlayerId);
-            textLog.text = "Sign in was a success\nPlayer ID: " + AuthenticationService.Instance.PlayerId;
+            //textLog.text = "Sign in was a success\nPlayer ID: " + AuthenticationService.Instance.PlayerId;
         }
         catch (AuthenticationException e)
         {
             print("Sign in failed: " + e);
-            textLog.text = "Sign in failed: " + e.Message;
+            //textLog.text = "Sign in failed: " + e.Message;
         }
-
     }
 }
 
