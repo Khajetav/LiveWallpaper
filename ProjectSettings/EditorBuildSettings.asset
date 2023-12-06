@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Animated.unity
     guid: 178f361645192de46a816850111f823a
+  - enabled: 1
+    path: Assets/Scenes/mainScene.unity
+    guid: 9c1970cd314dcdf459f63fe594f7133b
+  - enabled: 1
+    path: Assets/Scenes/playScene.unity
+    guid: 5141d38b6ddfd264b930a8c9871076c6
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 4b04fb7a6e13a1447842701dab22ab3c, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 76cb185611937f441adfcc626f51aa6a, type: 2}
