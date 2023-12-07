@@ -6,28 +6,55 @@ using Unity.Services.CloudSave;
 using UnityEngine.UI;
 using Unity.Services.Core;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
+using TMPro;
+using Unity.Services.Authentication;
 
 public class PetInteractionCloudSave : MonoBehaviour
 {
-    /*
-    [SerializeField] private Text currencyText; // Assign this in the inspector
+    
+    [SerializeField] private TextMeshProUGUI currencyText;
+    [SerializeField] private Transform transformMainCanvas;
     private int heartsCurrency = 0;
-    private const string currencyKey = "heartsCurrency"; // The key for the currency data in cloud save
 
-    public GameObject heartPrefab; // Assign a heart prefab with a sprite in the inspector
+
+    // the heart that will pop out of the pet
+    public GameObject heartPrefab;
     private float lastTapTime = 0f;
-    private float tapCooldown = 60f; // Cooldown in seconds
-    private bool canPet = true;
+    private float tapCooldown = 2f; 
     public async void Start()
     {
+        // must start UnityServices
         await UnityServices.InitializeAsync();
+        // must login first, anon is easiest
+        await SignInAnonymous();
         LoadHeartsCurrency();
+        if (PlayerPrefs.HasKey("HeartsCurrency"))
+        {
+            heartsCurrency = PlayerPrefs.GetInt("HeartsCurrency");
+        }
+        currencyText.text = heartsCurrency.ToString();
     }
 
-
-    // TAP THE PET 
-    private void OnMouseDown()
+    async Task SignInAnonymous()
     {
+        try
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+            Debug.Log("Sign in was a success");
+            Debug.Log("Player ID: " + AuthenticationService.Instance.PlayerId);
+            //textLog.text = "Sign in was a success\nPlayer ID: " + AuthenticationService.Instance.PlayerId;
+        }
+        catch (AuthenticationException e)
+        {
+            Debug.Log("Sign in failed: " + e);
+            //textLog.text = "Sign in failed: " + e.Message;
+        }
+    }
+    // TAP THE PET 
+    public void OnPet()
+    {
+        Debug.Log("Click registered");
         // default cooldown is 60f
         if (Time.time - lastTapTime >= tapCooldown)
         {
@@ -40,45 +67,18 @@ public class PetInteractionCloudSave : MonoBehaviour
     // COMMUNICATE WITH CLOUD SAVE
     public async void IncreaseHeartsCurrency()
     {
+        heartsCurrency = await CloudSaveWrapper.Load<int>("heartsKey");
         heartsCurrency++;
-        var data = new Dictionary<string, object> { { currencyKey, heartsCurrency } };
-        try
-        {
-            await CloudSaveService.Instance.Data.Player.SaveAsync(data);
-            UpdateCurrencyUI();
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("Error saving data: " + e.Message);
-        }
-        
+        PlayerPrefs.SetInt("HeartsCurrency", heartsCurrency);
+        PlayerPrefs.Save();
+        await CloudSaveWrapper.Save<int>("heartsKey", heartsCurrency);
+        UpdateCurrencyUI();
     }
     // Call this function to load the currency count from the cloud
     public async void LoadHeartsCurrency()
     {
-        try
-        {
-            // Load the data asynchronously without a generic type argument
-            var loadDataTask = CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { currencyKey });
-            await loadDataTask;
-
-            // If the task is completed successfully, process the results
-            if (loadDataTask.Status == TaskStatus.RanToCompletion)
-            {
-                var loadData = loadDataTask.Result; // This is a Dictionary<string, object>
-
-                // Check if the loadData contains the key and then extract the value if it exists
-                if (loadData.TryGetValue(currencyKey, out object loadedCurrencyObject) && loadedCurrencyObject is int loadedCurrency)
-                {
-                    heartsCurrency = loadedCurrency;
-                    UpdateCurrencyUI();
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            Debug.LogError("Error loading data: " + e.Message);
-        }
+        heartsCurrency = await CloudSaveWrapper.Load<int>("heartsKey");
+        UpdateCurrencyUI();
     }
 
     // Update the currency text UI
@@ -87,24 +87,37 @@ public class PetInteractionCloudSave : MonoBehaviour
         currencyText.text = $"Hearts: {heartsCurrency}";
     }
 
-
-
     private IEnumerator ShowHeartEffect()
     {
-        GameObject heartInstance = Instantiate(heartPrefab, transform.position, Quaternion.identity);
-        heartInstance.transform.SetParent(transform); // Optional: Set as child of the pet object
-        float duration = 2f; // Duration for the heart to float and disappear
+        GameObject heartInstance1 = Instantiate(heartPrefab, transform.position, Quaternion.identity);
+        GameObject heartInstance2 = Instantiate(heartPrefab, transform.position, Quaternion.identity);
+        GameObject heartInstance3 = Instantiate(heartPrefab, transform.position, Quaternion.identity);
+        heartInstance1.transform.SetParent(transformMainCanvas);
+        heartInstance2.transform.SetParent(transformMainCanvas); 
+        heartInstance3.transform.SetParent(transformMainCanvas);
 
-        // Animate heart floating up
+
+        float duration = 2f; 
         float elapsedTime = 0f;
+
         while (elapsedTime < duration)
         {
-            heartInstance.transform.position += new Vector3(0, Time.deltaTime, 0); // Float up
+            float wave = Mathf.Sin(elapsedTime);
+            heartInstance1.transform.position += new Vector3(wave, 1f, 0); 
+            heartInstance1.transform.localScale = heartInstance1.transform.localScale * 0.998f;
+
+            heartInstance2.transform.position += new Vector3(wave*1.3f, 0.8f, 0);
+            heartInstance2.transform.localScale = heartInstance2.transform.localScale * 0.997f;
+
+            heartInstance3.transform.position += new Vector3(wave*0.57f, 0.95f, 0);
+            heartInstance3.transform.localScale = heartInstance3.transform.localScale * 0.997f;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        Destroy(heartInstance); // Destroy the heart object after the animation
+        Destroy(heartInstance1); 
+        Destroy(heartInstance2); 
+        Destroy(heartInstance3); 
     }
-    */
+    
 }
