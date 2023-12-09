@@ -50,9 +50,17 @@ public class LiveWallpaperClass : MonoBehaviour
     }
     public bool GetWallpaperState()
     {
-        using (var unityPlayerSingletonClass = new AndroidJavaClass("kavukava.LiveWallpaper.UnityPlayerSingleton"))
+        try
         {
-            return unityPlayerSingletonClass.GetStatic<bool>("WallpaperVisible");
+            using (var unityPlayerSingletonClass = new AndroidJavaClass("kavukava.LiveWallpaper.UnityPlayerSingleton"))
+            {
+                return unityPlayerSingletonClass.GetStatic<bool>("WallpaperVisible");
+            }
         }
+        catch
+        {
+            return false;
+        }
+
     }
 }
