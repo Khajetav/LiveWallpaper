@@ -14,8 +14,8 @@ public class BackgroundShop : MonoBehaviour
     public TextMeshProUGUI heartsCurrencyOwnedText;
     public TextMeshProUGUI selectText;
     public GameObject currencyHolder;
+    public GameObject selectButton;
     private int currentIndex = 0;
-    public UnityEngine.UI.Button selectButton;
 
     void Start()
     {
@@ -56,16 +56,19 @@ public class BackgroundShop : MonoBehaviour
 
     private void UpdateDisplay()
     {
+        Debug.Log(backgrounds[currentIndex].Name);
+        // unlocked bg
         if (backgrounds[currentIndex].IsUnlocked)
         {
-            selectButton.IsActive();
+            selectButton.SetActive(true);
             currencyHolder.SetActive(false);
         }
+        // locked bg
         else
         {
-            currencyHolder.SetActive(true);
             costText.text = backgrounds[currentIndex].Cost.ToString();
-            selectButton.IsDestroyed();
+            selectButton.SetActive(false);
+            currencyHolder.SetActive(true);
         }
         displayImage.sprite = backgrounds[currentIndex].Image;
         nameText.text = backgrounds[currentIndex].Name;
