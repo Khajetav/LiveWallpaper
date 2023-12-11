@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,12 +16,70 @@ public class BackgroundShop : MonoBehaviour
     public TextMeshProUGUI selectText;
     public GameObject currencyHolder;
     public GameObject selectButton;
+    public GameObject imageLock;
+    public Confirmation confirmationScript; 
     private int currentIndex = 0;
 
     void Start()
     {
+        //CurrencyHandler.SaveCurrency(20);
+        confirmationScript.OnConfirmPress += HandleConfirm;
+        confirmationScript.OnCancelPress += HandleCancel;
         UpdateDisplay();
         heartsCurrencyOwnedText.text = CurrencyHandler.LoadCurrency().ToString();
+    }
+
+    public void UnlockBackground()
+    {
+        int currentCurrency = CurrencyHandler.LoadCurrency();
+        
+        if (PlayerPrefs.GetInt("background"+currentIndex)==0 && currentCurrency >= backgrounds[currentIndex].Cost)
+        {
+            confirmationScript.OpenThePanel();
+        }
+        else
+        {
+            StartCoroutine(ShakeCoroutine());
+            Debug.Log("Not enough currency");
+        }
+    }
+    private IEnumerator ShakeCoroutine()
+    {
+        Vector3 originalPosition = imageLock.transform.localPosition;
+        float elapsed = 0.0f;
+        float duration = 0.5f;
+
+        while (elapsed < duration)
+        {
+            // animation dies down with time but doesn't crash because it divided by 0
+            float x = Random.Range(-1f, 1f) * 5f * (elapsed == 0 ? 0 : (duration / elapsed));
+
+            //float y = Random.Range(-1f, 1f) * 0.2f;
+
+            imageLock.transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        imageLock.transform.localPosition = originalPosition;
+    }
+    private void HandleConfirm()
+    {
+        Debug.Log("The confirm button was pressed.");
+        int currentCurrency = CurrencyHandler.LoadCurrency();
+        currentCurrency -= backgrounds[currentIndex].Cost;
+        CurrencyHandler.SaveCurrency(currentCurrency);
+        // 1 = unlocked
+        // 0 = locked
+        PlayerPrefs.SetInt("background"+currentIndex,1);
+        UpdateDisplay();
+    }
+
+    private void HandleCancel()
+    {
+        Debug.Log("The cancel button was pressed.");
+        return;
     }
     public void NextBackground()
     {
@@ -28,23 +87,15 @@ public class BackgroundShop : MonoBehaviour
         UpdateDisplay();
     }
 
+
+
     public void PreviousBackground()
     {
         currentIndex = (currentIndex - 1 + backgrounds.Count) % backgrounds.Count;
         UpdateDisplay();
     }
 
-    public void UnlockBackground()
-    {
-        int currentCurrency = CurrencyHandler.LoadCurrency();
-        if (!backgrounds[currentIndex].IsUnlocked && currentCurrency >= backgrounds[currentIndex].Cost)
-        {
-            currentCurrency -= backgrounds[currentIndex].Cost;
-            CurrencyHandler.SaveCurrency(currentCurrency);
-            backgrounds[currentIndex].IsUnlocked = true;
-            UpdateDisplay();
-        }
-    }
+
 
     public void SelectBackground()
     {
@@ -74,5 +125,14 @@ public class BackgroundShop : MonoBehaviour
         nameText.text = backgrounds[currentIndex].Name;
         heartsCurrencyOwnedText.text = CurrencyHandler.LoadCurrency().ToString();
 
+    }
+    void OnDestroy()
+    {
+        // Unsubscribe to avoid memory leaks
+        if (confirmationScript != null)
+        {
+            confirmationScript.OnConfirmPress -= HandleConfirm;
+            confirmationScript.OnCancelPress -= HandleCancel;
+        }
     }
 }

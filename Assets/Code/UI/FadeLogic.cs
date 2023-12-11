@@ -12,7 +12,7 @@ public class FadeLogic : MonoBehaviour
 
     void Start()
     {
-        panelImage = GameObject.Find("fadePanel").GetComponent<Image>();
+        panelImage = GameObject.Find("PanelFade").GetComponent<Image>();
         StartCoroutine(FadeOut(() => Debug.Log("Fade Out Complete!")));
     }
 
