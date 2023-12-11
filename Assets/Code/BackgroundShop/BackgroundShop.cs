@@ -14,8 +14,9 @@ public class BackgroundShop : MonoBehaviour
     public TextMeshProUGUI costText;
     public TextMeshProUGUI heartsCurrencyOwnedText;
     public TextMeshProUGUI selectText;
-    public GameObject currencyHolder;
-    public GameObject selectButton;
+    public TextMeshProUGUI ownedStatusText;
+    public GameObject panelLocked;
+    public UnityEngine.UI.Button selectButton;
     public GameObject imageLock;
     public Confirmation confirmationScript; 
     private int currentIndex = 0;
@@ -23,6 +24,7 @@ public class BackgroundShop : MonoBehaviour
     void Start()
     {
         //CurrencyHandler.SaveCurrency(20);
+        //PlayerPrefs.DeleteAll();
         confirmationScript.OnConfirmPress += HandleConfirm;
         confirmationScript.OnCancelPress += HandleCancel;
         UpdateDisplay();
@@ -43,27 +45,7 @@ public class BackgroundShop : MonoBehaviour
             Debug.Log("Not enough currency");
         }
     }
-    private IEnumerator ShakeCoroutine()
-    {
-        Vector3 originalPosition = imageLock.transform.localPosition;
-        float elapsed = 0.0f;
-        float duration = 0.5f;
 
-        while (elapsed < duration)
-        {
-            // animation dies down with time but doesn't crash because it divided by 0
-            float x = Random.Range(-1f, 1f) * 5f * (elapsed == 0 ? 0 : (duration / elapsed));
-
-            //float y = Random.Range(-1f, 1f) * 0.2f;
-
-            imageLock.transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y, originalPosition.z);
-
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-
-        imageLock.transform.localPosition = originalPosition;
-    }
     private void HandleConfirm()
     {
         Debug.Log("The confirm button was pressed.");
@@ -99,32 +81,74 @@ public class BackgroundShop : MonoBehaviour
 
     public void SelectBackground()
     {
-        if (backgrounds[currentIndex].IsUnlocked)
-        {
-
-        }
+        selectText.text = "Equipped";
+        PlayerPrefs.SetString("background", backgrounds[currentIndex].Name);
     }
 
     private void UpdateDisplay()
     {
-        Debug.Log(backgrounds[currentIndex].Name);
-        // unlocked bg
-        if (backgrounds[currentIndex].IsUnlocked)
+        // first time code
+        if (!PlayerPrefs.HasKey("background"))
         {
-            selectButton.SetActive(true);
-            currencyHolder.SetActive(false);
+            PlayerPrefs.SetString("background", "Night");
+            PlayerPrefs.SetInt("background0", 1);
+        }
+        Debug.Log(backgrounds[currentIndex].Name);
+        Debug.Log(PlayerPrefs.GetString("background"));
+        // unlocked bg
+        if (PlayerPrefs.GetInt("background" + currentIndex)==1)
+        {
+            selectButton.interactable = true;
+            panelLocked.SetActive(false);
+            ownedStatusText.text = "Owned";
+            // if it's both unlocked and equipped
+            
+            if (PlayerPrefs.GetString("background")==backgrounds[currentIndex].Name)
+            {
+                selectText.text = "ACTIVE";
+                selectButton.interactable = false;
+            }
+            else
+            {
+                selectText.text = "SELECT";
+            }
         }
         // locked bg
         else
         {
             costText.text = backgrounds[currentIndex].Cost.ToString();
-            selectButton.SetActive(false);
-            currencyHolder.SetActive(true);
+            selectButton.interactable = false;
+            selectText.text = "";
+            panelLocked.SetActive(true);
+            ownedStatusText.text = "Not owned";
         }
         displayImage.sprite = backgrounds[currentIndex].Image;
         nameText.text = backgrounds[currentIndex].Name;
         heartsCurrencyOwnedText.text = CurrencyHandler.LoadCurrency().ToString();
 
+    }
+
+    // animation so that the lock shakes 
+    private IEnumerator ShakeCoroutine()
+    {
+        Vector3 originalPosition = imageLock.transform.localPosition;
+        float elapsed = 0.0f;
+        float duration = 0.5f;
+
+        while (elapsed < duration)
+        {
+            // animation dies down with time but doesn't crash because it divided by 0
+            float x = Random.Range(-1f, 1f) * 5f * (elapsed == 0 ? 0 : (duration / elapsed));
+
+            //float y = Random.Range(-1f, 1f) * 0.2f;
+
+            imageLock.transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        imageLock.transform.localPosition = originalPosition;
     }
     void OnDestroy()
     {

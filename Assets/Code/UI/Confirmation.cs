@@ -15,7 +15,8 @@ public class Confirmation : MonoBehaviour
     public event Action OnCancelPress;
     private void Awake()
     {
-        CurrencyHandler.SaveCurrency(100);
+        // uncomment to test currencies
+        //CurrencyHandler.SaveCurrency(100);
         confirmationPanel.SetActive(false);
     }
 
@@ -27,6 +28,8 @@ public class Confirmation : MonoBehaviour
     public void OpenThePanel()
     {
         confirmationPanel.SetActive(true);
+        // animation stuff
+        // initial declarations before animations
         confirmationBackground.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); 
         canvasGroup.alpha = 0;
         StartCoroutine(DoFadeIn());
@@ -44,6 +47,7 @@ public class Confirmation : MonoBehaviour
         CloseThePanel();
     }
 
+    // animations
     private IEnumerator DoFadeIn()
     {
         float duration = 0.2f;
