@@ -7,22 +7,17 @@ public class LiveWallpaperClass : MonoBehaviour
     private bool WallpaperHasBeenSet;
     void Update()
     {
-        WallpaperHasBeenSet = PlayerPrefs.GetInt("MyBool") == 1;
-        #if DEBUG
-        //  WallpaperHasBeenSet = false;
-
-        #endif
         string currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName != "Main")
+        // if the scene is the animated wallpaper
+        // and we aren't looking at the wallpaper
+        if (currentSceneName == "Animated" && GetWallpaperState())
         {
-            if (WallpaperHasBeenSet && GetWallpaperState() || !WallpaperHasBeenSet && GetWallpaperState())
-            {
-                SceneManager.LoadScene("Main");
-            }
+            SceneManager.LoadScene("mainScene");
         }
+
         if (currentSceneName != "Animated")
         {
-            if (WallpaperHasBeenSet && !GetWallpaperState())
+            if (!GetWallpaperState())
             {
                 SceneManager.LoadScene("Animated");
             }
@@ -40,13 +35,13 @@ public class LiveWallpaperClass : MonoBehaviour
             activity.Call("SetWallpaper");
         }
         WallpaperHasBeenSet = true;
-        PlayerPrefs.SetInt("MyBool", WallpaperHasBeenSet ? 1 : 0);
+        PlayerPrefs.SetInt("WallpaperStatus", WallpaperHasBeenSet ? 1 : 0);
 
     }
 
     public void BackToTheMenu()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("mainScene");
     }
     public bool GetWallpaperState()
     {

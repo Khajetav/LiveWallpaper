@@ -1352,7 +1352,7 @@ GameObject:
   - component: {fileID: 397895725}
   - component: {fileID: 397895724}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonSetWp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1421,7 +1421,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397895725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700511}
+        m_TargetAssemblyTypeName: LiveWallpaperClass, Assembly-CSharp
+        m_MethodName: SetWallpaper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397895725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2236,6 +2248,7 @@ GameObject:
   - component: {fileID: 872700508}
   - component: {fileID: 872700514}
   - component: {fileID: 872700515}
+  - component: {fileID: 872700516}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2266,6 +2279,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: b7295e4f957652b4c8967b146d7a8974, type: 3}
   mountainObject: {fileID: 7362292661679455598, guid: 5d639195855b5714bb6e9d524ad65036, type: 3}
   mountainParent: {fileID: 1622522822}
+  mountainSprites: []
   treeParent: {fileID: 1768401214}
   treeObject: {fileID: 4849487042273090986, guid: 6a490047035b89b4d83d9826aabe3cf8, type: 3}
   treeSprites:
@@ -2338,6 +2352,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyText: {fileID: 37743487}
+--- !u!114 &872700516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a18ee413538114d8d4e6f85ff2b6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyImage: {fileID: 1853924566}
+  floorImage: {fileID: 308875151}
+  spritesTreeNight:
+  - {fileID: 2800000, guid: f681eb0fc8a2a834296bb92a4d0cc9cb, type: 3}
+  spritesTreeDay:
+  - {fileID: 2800000, guid: 073699440bb76054395ff008513a864f, type: 3}
+  spritesTreeNightJungle:
+  - {fileID: 2800000, guid: 4b08ec15b4221174eba019e14bc473c6, type: 3}
+  spritesTreeDayJungle:
+  - {fileID: 2800000, guid: 060e9b7f52a60b7439e5d5e102eaa32f, type: 3}
+  spritesMountainNight:
+  - {fileID: 2800000, guid: 11424b7117414cc499590d277c6a9f4f, type: 3}
+  spritesMountainDay:
+  - {fileID: 2800000, guid: d64c44ef14f9e1549b7bd920a44632c2, type: 3}
+  spritesMountainNightJungle:
+  - {fileID: 2800000, guid: bba79c3323e0bac4e8dc546dbd2f76dd, type: 3}
+  spritesMountainDayJungle:
+  - {fileID: 2800000, guid: 6e6cae5cbc0f29c45a25aa1174eb2de8, type: 3}
+  skyImageNight: {fileID: 2800000, guid: 4491576506e1961418fd51e22d92c8b7, type: 3}
+  skyImageDay: {fileID: 2800000, guid: d3119cbe0e7347246b54a8c1d0fc1690, type: 3}
+  skyImageNightJungle: {fileID: 2800000, guid: 10b11922e505fe4449a45cf0905f40c9, type: 3}
+  skyImageDayJungle: {fileID: 2800000, guid: d3119cbe0e7347246b54a8c1d0fc1690, type: 3}
+  floorImageNight: {fileID: 2800000, guid: 69d00260b6c13bb47bae1a7ff1e25494, type: 3}
+  floorImageDay: {fileID: 2800000, guid: 5d8e3f2240d13fb478c20cf5c93b33fb, type: 3}
+  floorImageNightJungle: {fileID: 2800000, guid: 07a04b14dccbd62448cb0183c53368ee, type: 3}
+  floorImageDayJungle: {fileID: 2800000, guid: 02b64f9051da7c5478875aebca7d90aa, type: 3}
 --- !u!1 &877641911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,7 +2742,7 @@ GameObject:
   - component: {fileID: 970205235}
   - component: {fileID: 970205238}
   m_Layer: 5
-  m_Name: fadePanel
+  m_Name: PanelFade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4018,7 +4070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -50.000122, y: 226.66003}
+  m_AnchoredPosition: {x: -50.000244, y: 226.66003}
   m_SizeDelta: {x: 447.38464, y: 894.7693}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1853924564

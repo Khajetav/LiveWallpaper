@@ -1696,6 +1696,7 @@ GameObject:
   - component: {fileID: 872700513}
   - component: {fileID: 872700511}
   - component: {fileID: 872700509}
+  - component: {fileID: 872700517}
   - component: {fileID: 872700508}
   - component: {fileID: 872700514}
   - component: {fileID: 872700515}
@@ -1730,6 +1731,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: b7295e4f957652b4c8967b146d7a8974, type: 3}
   mountainObject: {fileID: 7362292661679455598, guid: 5d639195855b5714bb6e9d524ad65036, type: 3}
   mountainParent: {fileID: 1622522822}
+  mountainSprites:
+  - {fileID: 2800000, guid: a17c48d9c252a2a439c5771347105497, type: 3}
   treeParent: {fileID: 1768401214}
   treeObject: {fileID: 4849487042273090986, guid: 6a490047035b89b4d83d9826aabe3cf8, type: 3}
   treeSprites:
@@ -1792,11 +1795,23 @@ MonoBehaviour:
   backgrounds:
   - Name: Night
     Cost: 0
-    Image: {fileID: 21300000, guid: dc825be0a62cb3747af43f21114768bb, type: 3}
+    Image: {fileID: 2410671940745902572, guid: 4491576506e1961418fd51e22d92c8b7, type: 3}
     IsUnlocked: 1
   - Name: Day
-    Cost: 50
-    Image: {fileID: 21300000, guid: a2c2abf0f06b6c54ba373777bd6ed0d1, type: 3}
+    Cost: 10
+    Image: {fileID: -1955448553306655712, guid: 4ec44f8035cb0c246b44843087c54557, type: 3}
+    IsUnlocked: 0
+  - Name: NightJungle
+    Cost: 10
+    Image: {fileID: 2410671940745902572, guid: 10b11922e505fe4449a45cf0905f40c9, type: 3}
+    IsUnlocked: 0
+  - Name: DayJungle
+    Cost: 10
+    Image: {fileID: 2410671940745902572, guid: d3119cbe0e7347246b54a8c1d0fc1690, type: 3}
+    IsUnlocked: 0
+  - Name: DayJungle
+    Cost: 500
+    Image: {fileID: 2410671940745902572, guid: d3119cbe0e7347246b54a8c1d0fc1690, type: 3}
     IsUnlocked: 0
   displayImage: {fileID: 474609189}
   nameText: {fileID: 2132896016}
@@ -1808,6 +1823,7 @@ MonoBehaviour:
   selectButton: {fileID: 1691432282}
   imageLock: {fileID: 492131168}
   confirmationScript: {fileID: 872700516}
+  panelImage: {fileID: 970205235}
 --- !u!114 &872700515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,6 +1853,44 @@ MonoBehaviour:
   confirmationPanel: {fileID: 493143454}
   confirmationBackground: {fileID: 641007846}
   canvasGroup: {fileID: 493143458}
+--- !u!114 &872700517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a18ee413538114d8d4e6f85ff2b6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyImage: {fileID: 1853924566}
+  floorImage: {fileID: 308875151}
+  spritesTreeNight:
+  - {fileID: 2800000, guid: f681eb0fc8a2a834296bb92a4d0cc9cb, type: 3}
+  spritesTreeDay:
+  - {fileID: 2800000, guid: 073699440bb76054395ff008513a864f, type: 3}
+  spritesTreeNightJungle:
+  - {fileID: 2800000, guid: 4b08ec15b4221174eba019e14bc473c6, type: 3}
+  spritesTreeDayJungle:
+  - {fileID: 2800000, guid: 060e9b7f52a60b7439e5d5e102eaa32f, type: 3}
+  spritesMountainNight:
+  - {fileID: 2800000, guid: 11424b7117414cc499590d277c6a9f4f, type: 3}
+  spritesMountainDay:
+  - {fileID: 2800000, guid: d64c44ef14f9e1549b7bd920a44632c2, type: 3}
+  spritesMountainNightJungle:
+  - {fileID: 2800000, guid: bba79c3323e0bac4e8dc546dbd2f76dd, type: 3}
+  spritesMountainDayJungle:
+  - {fileID: 2800000, guid: 6e6cae5cbc0f29c45a25aa1174eb2de8, type: 3}
+  skyImageNight: {fileID: 2800000, guid: 4491576506e1961418fd51e22d92c8b7, type: 3}
+  skyImageDay: {fileID: 2800000, guid: d3119cbe0e7347246b54a8c1d0fc1690, type: 3}
+  skyImageNightJungle: {fileID: 2800000, guid: 10b11922e505fe4449a45cf0905f40c9, type: 3}
+  skyImageDayJungle: {fileID: 2800000, guid: d3119cbe0e7347246b54a8c1d0fc1690, type: 3}
+  floorImageNight: {fileID: 2800000, guid: 69d00260b6c13bb47bae1a7ff1e25494, type: 3}
+  floorImageDay: {fileID: 2800000, guid: 5d8e3f2240d13fb478c20cf5c93b33fb, type: 3}
+  floorImageNightJungle: {fileID: 2800000, guid: 07a04b14dccbd62448cb0183c53368ee, type: 3}
+  floorImageDayJungle: {fileID: 2800000, guid: 02b64f9051da7c5478875aebca7d90aa, type: 3}
 --- !u!1 &877641911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4900075493567921574, guid: e3e1552c92a90444dbfa7a805e99057b, type: 3}
@@ -3245,7 +3299,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1691432283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700514}
+        m_TargetAssemblyTypeName: BackgroundShop, Assembly-CSharp
+        m_MethodName: SelectBackground
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1691432283
 MonoBehaviour:
   m_ObjectHideFlags: 0

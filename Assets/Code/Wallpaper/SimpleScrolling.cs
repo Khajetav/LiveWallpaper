@@ -9,7 +9,7 @@ public class SimpleScrolling : MonoBehaviour
     [SerializeField] private RawImage Sky;
     [SerializeField] private RawImage Floor;
     [SerializeField] private RawImage Fog;
-    private float SkyScrollingSpeed=0.005f;
+    private float SkyScrollingSpeed=0.0025f;
     private float FloorScrollingSpeed=0.01f;
     private float FogScrollingSpeed=0.005f;
     // Update is called once per frame

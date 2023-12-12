@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
@@ -20,10 +22,11 @@ public class BackgroundShop : MonoBehaviour
     public GameObject imageLock;
     public Confirmation confirmationScript; 
     private int currentIndex = 0;
-
+    public Image panelImage;
     void Start()
     {
-        //CurrencyHandler.SaveCurrency(20);
+        currentIndex = PlayerPrefs.GetInt("selectedBackgroundIndex");
+        CurrencyHandler.SaveCurrency(100);
         //PlayerPrefs.DeleteAll();
         confirmationScript.OnConfirmPress += HandleConfirm;
         confirmationScript.OnCancelPress += HandleCancel;
@@ -66,6 +69,7 @@ public class BackgroundShop : MonoBehaviour
     public void NextBackground()
     {
         currentIndex = (currentIndex + 1) % backgrounds.Count;
+        PlayerPrefs.SetInt("selectedBackgroundIndex", currentIndex);
         UpdateDisplay();
     }
 
@@ -74,6 +78,7 @@ public class BackgroundShop : MonoBehaviour
     public void PreviousBackground()
     {
         currentIndex = (currentIndex - 1 + backgrounds.Count) % backgrounds.Count;
+        PlayerPrefs.SetInt("selectedBackgroundIndex", currentIndex);
         UpdateDisplay();
     }
 
@@ -81,8 +86,33 @@ public class BackgroundShop : MonoBehaviour
 
     public void SelectBackground()
     {
-        selectText.text = "Equipped";
+        selectText.text = "ACTIVE";
+        selectButton.interactable = false;
         PlayerPrefs.SetString("background", backgrounds[currentIndex].Name);
+        Debug.Log("Current bg name: " + backgrounds[currentIndex].Name);
+        CallFadeIn();
+
+
+    }
+    public void CallFadeIn(Action onCompleted = null)
+    {
+        StartCoroutine(FadeIn(onCompleted));
+    }
+    IEnumerator FadeIn(Action onCompleted)
+    {
+        float duration = 1f;
+        float elapsed = 0;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(0, 1, elapsed / duration);
+            panelImage.color = new Color(panelImage.color.r, panelImage.color.g, panelImage.color.b, alpha);
+            yield return null;
+        }
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+        onCompleted?.Invoke();
     }
 
     private void UpdateDisplay()
@@ -138,7 +168,7 @@ public class BackgroundShop : MonoBehaviour
         while (elapsed < duration)
         {
             // animation dies down with time but doesn't crash because it divided by 0
-            float x = Random.Range(-1f, 1f) * 5f * (elapsed == 0 ? 0 : (duration / elapsed));
+            float x = UnityEngine.Random.Range(-1f, 1f) * 5f * (elapsed == 0 ? 0 : (duration / elapsed));
 
             //float y = Random.Range(-1f, 1f) * 0.2f;
 

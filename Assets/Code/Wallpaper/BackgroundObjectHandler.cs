@@ -15,6 +15,7 @@ public class BackgroundObjectHandler : MonoBehaviour
     public GameObject mountainObject;
     public GameObject mountainParent;
     Queue<GameObject> mountainQueue = new Queue<GameObject> ();
+    public List<Texture> mountainSprites = new List<Texture>();
 
     public GameObject treeParent;
     public GameObject treeObject;
@@ -26,29 +27,41 @@ public class BackgroundObjectHandler : MonoBehaviour
     private float mountainSpeed = 0.02f;
     private float treeSpeed = 0.125f;
 
+
     void Start()
     {
+        gameObject.GetComponent<WallpaperHandler>().WallpaperUpdate();
         // InvokeRepeating is like Update, begins from 0 and spawns objects according to spawnFrequency
         Invoke("SpawnCloud",0);
         Invoke("SpawnTree",0);
-        InvokeRepeating("SpawnMountain", 0, mountainSpawnFrequency);
-        GameObject mountain = (Instantiate(mountainObject, new Vector3(0, 0, 0), Quaternion.identity));
-        mountain.transform.SetParent(mountainParent.transform, false);
-        mountain.transform.Translate(new Vector3(4, 0, 0));
-        mountainQueue.Enqueue(mountain);
-        GameObject tree = (Instantiate(treeObject, new Vector3(0, 0, 0), Quaternion.identity));
-        tree.transform.SetParent(treeParent.transform, false);
-        tree.transform.Translate(new Vector3(0, 0, 0));
-        treeQueue.Enqueue(tree);
+        Invoke("SpawnMountain",0);
+        //GameObject mountain = (Instantiate(mountainObject, new Vector3(0, 0, 0), Quaternion.identity));
+        //mountain.transform.SetParent(mountainParent.transform, false);
+        //mountain.transform.Translate(new Vector3(4, 0, 0));
+        //mountainQueue.Enqueue(mountain);
+        //GameObject tree = (Instantiate(treeObject, new Vector3(0, 0, 0), Quaternion.identity));
+        //tree.transform.SetParent(treeParent.transform, false);
+        //tree.transform.Translate(new Vector3(0, 0, 0));
+        //treeQueue.Enqueue(tree);
     }
 
     void SpawnMountain()
     {
         // spawns a mountain
+        int randMountain = UnityEngine.Random.Range(0, mountainSprites.Count);
+
+        // spawns a cloud
         GameObject mountain = (Instantiate(mountainObject, new Vector3(30, 0, 0), Quaternion.identity));
         mountain.transform.SetParent(mountainParent.transform, false);
-        mountain.transform.Translate(new Vector3(40, 0, 0));
+        mountain.transform.Translate(new Vector3(10, UnityEngine.Random.Range(0f, 0.1f), 0));
+        // Change the sprite of the cloud
+        RawImage rawImage = mountain.GetComponent<RawImage>();
+        if (rawImage != null)
+        {
+            rawImage.texture = mountainSprites[randMountain];
+        }
         mountainQueue.Enqueue(mountain);
+        Invoke("SpawnMountain", UnityEngine.Random.Range(120f, 150f));
     }
     void SpawnTree()
     { 
@@ -100,6 +113,7 @@ public class BackgroundObjectHandler : MonoBehaviour
     }
     void Update()
     {
+        // move clouds
         foreach (var cloud in cloudQueue)
         {
             cloud.transform.Translate(Vector3.left * cloudSpeed * Time.deltaTime);
@@ -113,9 +127,10 @@ public class BackgroundObjectHandler : MonoBehaviour
                 Destroy(topCloud);
             }
         }
-        foreach (var cloud in mountainQueue)
+        // move mountains
+        foreach (var mountain in mountainQueue)
         {
-            cloud.transform.Translate(Vector3.left * mountainSpeed * Time.deltaTime);
+            mountain.transform.Translate(Vector3.left * mountainSpeed * Time.deltaTime);
         }
         if (mountainQueue.Count > 0)
         {
@@ -126,6 +141,8 @@ public class BackgroundObjectHandler : MonoBehaviour
                 Destroy(topMountain);
             }
         }
+        
+        // move trees
         foreach (var tree in treeQueue)
         {
             tree.transform.Translate(Vector3.left * treeSpeed * Time.deltaTime);
