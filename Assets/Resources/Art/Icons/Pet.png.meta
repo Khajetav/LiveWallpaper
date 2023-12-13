@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 073699440bb76054395ff008513a864f
+guid: 79315c4da9e0db447b5afca3bedbc749
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6853316077166303748
-    second: Tree_0
+      213: -5238412894070185512
+    second: Pet_0
+  - first:
+      213: -1860481344596284588
+    second: Pet_1
+  - first:
+      213: 2933619403224408243
+    second: Pet_2
+  - first:
+      213: 5461056003228237293
+    second: Pet_3
+  - first:
+      213: -1772777889795022449
+    second: Pet_4
+  - first:
+      213: -6033327940057249894
+    second: Pet_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tree_0
+      name: Pet_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 0
-        width: 65
-        height: 120
+        x: 46
+        y: 175
+        width: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +168,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40a98f869aedb1f50800000000000000
-      internalID: 6853316077166303748
+      spriteID: 8d1ee162a3b6d47b0800000000000000
+      internalID: -5238412894070185512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pet_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 109
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45be818031e3e26e0800000000000000
+      internalID: -1860481344596284588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pet_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 136
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b06263ed4f46b820800000000000000
+      internalID: 2933619403224408243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pet_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 70
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dedfee2408199cb40800000000000000
+      internalID: 5461056003228237293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pet_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 26
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81e91dd6e3d567e0800000000000000
+      internalID: -1772777889795022449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pet_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97c2775430554ca0800000000000000
+      internalID: -6033327940057249894
       vertices: []
       indices: 
       edges: []
@@ -170,7 +290,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tree_0: 6853316077166303748
+      Pet_0: -5238412894070185512
+      Pet_1: -1860481344596284588
+      Pet_2: 2933619403224408243
+      Pet_3: 5461056003228237293
+      Pet_4: -1772777889795022449
+      Pet_5: -6033327940057249894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -21,11 +21,24 @@ public class BackgroundObjectHandler : MonoBehaviour
     public GameObject treeObject;
     Queue<GameObject> treeQueue = new Queue<GameObject> ();
     public List<Texture> treeSprites = new List<Texture> ();
-    
-    private float cloudSpeed = 0.5f;
-    private float mountainSpawnFrequency = 120f;
-    private float mountainSpeed = 0.02f;
-    private float treeSpeed = 0.125f;
+
+    public float cloudSpeed = 0.5f;
+    public float mountainSpeed = 0.02f;
+    public float treeSpeed = 0.125f;
+    // how far from the middle of the screen the mountain will spawn
+    // some scenes have different relative distances
+    public float cloudDespawnDistance = 15f;
+    public float mountainDespawnDistance = 30f;
+    public float treeDespawnDistance = 15f;
+
+    public float cloudSpawnDistance = 10f;
+    public float mountainSpawnDistance = 10f;
+    public float treeSpawnDistance = 10f;
+
+    public float cloudSpawnFrequency = 10f;
+    public float mountainSpawnFrequency = 600f;
+    public float treeSpawnFrequency = 20f;
+
 
 
     void Start()
@@ -52,8 +65,9 @@ public class BackgroundObjectHandler : MonoBehaviour
 
         // spawns a cloud
         GameObject mountain = (Instantiate(mountainObject, new Vector3(30, 0, 0), Quaternion.identity));
+        mountain.transform.localScale = new Vector3(40, 30, 1);
         mountain.transform.SetParent(mountainParent.transform, false);
-        mountain.transform.Translate(new Vector3(10, UnityEngine.Random.Range(0f, 0.1f), 0));
+        mountain.transform.Translate(new Vector3(mountainSpawnDistance, UnityEngine.Random.Range(0f, 0.1f), 0));
         // Change the sprite of the cloud
         RawImage rawImage = mountain.GetComponent<RawImage>();
         if (rawImage != null)
@@ -61,7 +75,7 @@ public class BackgroundObjectHandler : MonoBehaviour
             rawImage.texture = mountainSprites[randMountain];
         }
         mountainQueue.Enqueue(mountain);
-        Invoke("SpawnMountain", UnityEngine.Random.Range(120f, 150f));
+        Invoke("SpawnMountain", UnityEngine.Random.Range(mountainSpawnFrequency, mountainSpawnFrequency+200f));
     }
     void SpawnTree()
     { 
@@ -77,7 +91,7 @@ public class BackgroundObjectHandler : MonoBehaviour
         // spawns a cloud
         GameObject tree = (Instantiate(treeObject, new Vector3(12, UnityEngine.Random.Range(4f, 8f), 0), Quaternion.identity));
         tree.transform.SetParent(treeParent.transform, false);
-        tree.transform.Translate(new Vector3(10, UnityEngine.Random.Range(0f, 0.1f), 0));
+        tree.transform.Translate(new Vector3(treeSpawnDistance, UnityEngine.Random.Range(0f, 0.1f), 0));
         // Change the sprite of the cloud
         RawImage rawImage = tree.GetComponent<RawImage>();
         if (rawImage != null)
@@ -85,7 +99,7 @@ public class BackgroundObjectHandler : MonoBehaviour
             rawImage.texture = treeSprites[randTree];
         }
         treeQueue.Enqueue(tree);
-        Invoke("SpawnTree", UnityEngine.Random.Range(20f, 80f));
+        Invoke("SpawnTree", UnityEngine.Random.Range(treeSpawnFrequency, treeSpawnFrequency+60f));
     }
     void SpawnCloud()
     {
@@ -101,7 +115,7 @@ public class BackgroundObjectHandler : MonoBehaviour
         // spawns a cloud
         GameObject cloud = (Instantiate(cloudObject, new Vector3(12, UnityEngine.Random.Range(4f, 8f), 0), Quaternion.identity));
         cloud.transform.SetParent(cloudParent.transform, false);
-        cloud.transform.Translate(new Vector3(10, UnityEngine.Random.Range(4f, 8f), 0));
+        cloud.transform.Translate(new Vector3(cloudSpawnDistance, UnityEngine.Random.Range(4f, 8f), 0));
         // Change the sprite of the cloud
         RawImage rawImage = cloud.GetComponent<RawImage>();
         if (rawImage != null)
@@ -109,7 +123,7 @@ public class BackgroundObjectHandler : MonoBehaviour
             rawImage.texture = cloudSprites[randCloud];
         }
         cloudQueue.Enqueue(cloud);
-        Invoke("SpawnCloud", UnityEngine.Random.Range(4f, 16f));
+        Invoke("SpawnCloud", UnityEngine.Random.Range(cloudSpawnFrequency, cloudSpawnFrequency+14f));
     }
     void Update()
     {
@@ -121,7 +135,7 @@ public class BackgroundObjectHandler : MonoBehaviour
         if (cloudQueue.Count > 0)
         {
             GameObject topCloud = cloudQueue.Peek();
-            if (topCloud.transform.position.x < -15f)
+            if (topCloud.transform.position.x < -cloudDespawnDistance)
             {
                 cloudQueue.Dequeue();
                 Destroy(topCloud);
@@ -135,7 +149,7 @@ public class BackgroundObjectHandler : MonoBehaviour
         if (mountainQueue.Count > 0)
         {
             GameObject topMountain = mountainQueue.Peek();
-            if (topMountain.transform.position.x < -30f)
+            if (topMountain.transform.position.x < -mountainDespawnDistance)
             {
                 mountainQueue.Dequeue();
                 Destroy(topMountain);
@@ -150,7 +164,7 @@ public class BackgroundObjectHandler : MonoBehaviour
         if (treeQueue.Count > 0)
         {
             GameObject topTree = treeQueue.Peek();
-            if (topTree.transform.position.x < -15f)
+            if (topTree.transform.position.x < -treeDespawnDistance)
             {
                 treeQueue.Dequeue();
                 Destroy(topTree);

@@ -1,32 +1,34 @@
-﻿using UnityEngine;
+﻿using System.Runtime.CompilerServices;
+using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LiveWallpaperClass : MonoBehaviour
 {
-    private bool WallpaperHasBeenSet;
+    bool hasAnimatedBeenLoaded = false;
     void Update()
     {
+        bool IsActivityVisible = GetWallpaperState();
+        // IsPreview: false
+        // IsActivityVisible: true
         string currentSceneName = SceneManager.GetActiveScene().name;
-        // if the scene is the animated wallpaper
-        // and we aren't looking at the wallpaper
-        if (currentSceneName == "Animated" && GetWallpaperState())
+        if (IsActivityVisible)
         {
-            SceneManager.LoadScene("mainScene");
-        }
-
-        if (currentSceneName != "Animated")
-        {
-            if (!GetWallpaperState())
+            if (currentSceneName == "Animated")
             {
-                SceneManager.LoadScene("Animated");
+                SceneManager.LoadScene("mainScene");
             }
         }
-    }
-    void Start()
-    {
-    }
+        else
+        {
+            if(currentSceneName != "Animated")
+            {
+                SceneManager.LoadScene("Animated");
+            } 
+        }
 
+    }
     public void SetWallpaper()
     {
         using (AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
@@ -34,8 +36,6 @@ public class LiveWallpaperClass : MonoBehaviour
             AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
             activity.Call("SetWallpaper");
         }
-        WallpaperHasBeenSet = true;
-        PlayerPrefs.SetInt("WallpaperStatus", WallpaperHasBeenSet ? 1 : 0);
 
     }
 
@@ -50,6 +50,21 @@ public class LiveWallpaperClass : MonoBehaviour
             using (var unityPlayerSingletonClass = new AndroidJavaClass("kavukava.LiveWallpaper.UnityPlayerSingleton"))
             {
                 return unityPlayerSingletonClass.GetStatic<bool>("WallpaperVisible");
+            }
+        }
+        catch
+        {
+            return false;
+        }
+
+    }
+    public bool GetIsPreview()
+    {
+        try
+        {
+            using (var unityPlayerSingletonClass = new AndroidJavaClass("kavukava.LiveWallpaper.UnityPlayerSingleton"))
+            {
+                return unityPlayerSingletonClass.GetStatic<bool>("IsPreview");
             }
         }
         catch
