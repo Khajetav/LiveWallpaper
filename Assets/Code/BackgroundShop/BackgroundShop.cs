@@ -26,7 +26,7 @@ public class BackgroundShop : MonoBehaviour
     void Start()
     {
         currentIndex = PlayerPrefs.GetInt("selectedBackgroundIndex");
-        CurrencyHandler.SaveCurrency(100);
+        //CurrencyHandler.SaveCurrency(100);
         //PlayerPrefs.DeleteAll();
         confirmationScript.OnConfirmPress += HandleConfirm;
         confirmationScript.OnCancelPress += HandleCancel;

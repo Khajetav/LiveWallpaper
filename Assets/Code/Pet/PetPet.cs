@@ -66,13 +66,13 @@ public class PetPet : MonoBehaviour
         {
             float wave = Mathf.Sin(elapsedTime);
             heartInstance1.transform.position += new Vector3(wave, 1f, 0); 
-            heartInstance1.transform.localScale = heartInstance1.transform.localScale * 0.998f;
+            heartInstance1.transform.localScale = heartInstance1.transform.localScale * 0.99f;
 
             heartInstance2.transform.position += new Vector3(wave*1.3f, 0.8f, 0);
-            heartInstance2.transform.localScale = heartInstance2.transform.localScale * 0.997f;
+            heartInstance2.transform.localScale = heartInstance2.transform.localScale * 0.95f;
 
             heartInstance3.transform.position += new Vector3(wave*0.57f, 0.95f, 0);
-            heartInstance3.transform.localScale = heartInstance3.transform.localScale * 0.997f;
+            heartInstance3.transform.localScale = heartInstance3.transform.localScale * 0.95f;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
