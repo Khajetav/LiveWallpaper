@@ -2573,6 +2573,8 @@ GameObject:
   - component: {fileID: 872700514}
   - component: {fileID: 872700515}
   - component: {fileID: 872700516}
+  - component: {fileID: 872700518}
+  - component: {fileID: 872700517}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2648,7 +2650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63729b88a8ddf3e489aceb893ee57606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDebug: {fileID: 0}
 --- !u!4 &872700513
 Transform:
   m_ObjectHideFlags: 0
@@ -2727,6 +2728,30 @@ MonoBehaviour:
   floorImageDay: {fileID: 2800000, guid: 5d8e3f2240d13fb478c20cf5c93b33fb, type: 3}
   floorImageNightJungle: {fileID: 2800000, guid: 07a04b14dccbd62448cb0183c53368ee, type: 3}
   floorImageDayJungle: {fileID: 2800000, guid: 02b64f9051da7c5478875aebca7d90aa, type: 3}
+--- !u!114 &872700517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62987a1abae4fb041a0446fc84b446be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &872700518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7578950dbcbd0424585cc57d5e4a023f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &883488715
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,9 +6,13 @@ using UnityEngine.UI;
 
 public class LiveWallpaperClass : MonoBehaviour
 {
-    bool hasAnimatedBeenLoaded = false;
+    private void Start()
+    {
+        Application.targetFrameRate = 10;
+    }
     void Update()
     {
+        #if !UNITY_EDITOR
         bool IsActivityVisible = GetWallpaperState();
         // IsPreview: false
         // IsActivityVisible: true
@@ -27,7 +31,7 @@ public class LiveWallpaperClass : MonoBehaviour
                 SceneManager.LoadScene("Animated");
             } 
         }
-
+        #endif
     }
     public void SetWallpaper()
     {

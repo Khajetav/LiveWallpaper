@@ -25,8 +25,8 @@ public class Auth : MonoBehaviour
         }
     }
     
-    private void OnApplicationQuit()
-    {
-        CurrencyHandler.SaveCurrencyCloud();
-    }
+    //private void OnApplicationQuit()
+    //{
+    //    CurrencyHandler.SaveCurrencyCloud();
+    //}
 }

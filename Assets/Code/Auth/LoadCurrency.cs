@@ -9,6 +9,7 @@ public class LoadCurrency : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 30;
         if (!PlayerPrefs.HasKey("HeartsCurrency"))
         {
             CurrencyHandler.SaveCurrency(0);
