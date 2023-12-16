@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
 public class BackgroundShop : MonoBehaviour
@@ -21,8 +19,9 @@ public class BackgroundShop : MonoBehaviour
     public UnityEngine.UI.Button selectButton;
     public GameObject imageLock;
     public Confirmation confirmationScript; 
-    private int currentIndex = 0;
     public Image panelImage;
+    public AchievementManager achievementManager;
+    private int currentIndex = 0;
     void Start()
     {
         currentIndex = PlayerPrefs.GetInt("selectedBackgroundIndex");
@@ -57,7 +56,24 @@ public class BackgroundShop : MonoBehaviour
         CurrencyHandler.SaveCurrency(currentCurrency);
         // 1 = unlocked
         // 0 = locked
-        PlayerPrefs.SetInt("background"+currentIndex,1);
+        PlayerPrefs.SetInt("background" + currentIndex, 1);
+        PlayerPrefs.Save();
+        if (backgrounds[currentIndex].Name == "Day")
+        {
+            achievementManager.UnlockAchievement("Morning!");
+        }
+        else if (backgrounds[currentIndex].Name == "DayJungle")
+        {
+            achievementManager.UnlockAchievement("Wood Needed");
+        }
+        else if (backgrounds[currentIndex].Name == "NightJungle")
+        {
+            achievementManager.UnlockAchievement("It's Cold Out There");
+        }
+        if (PlayerPrefs.GetInt("Morning!") == 1 && PlayerPrefs.GetInt("Wood Needed") == 1 && PlayerPrefs.GetInt("It's Cold Out There") == 1)
+        {
+            achievementManager.UnlockAchievement("Background Keeper");
+        }
         UpdateDisplay();
     }
 
@@ -89,6 +105,10 @@ public class BackgroundShop : MonoBehaviour
         selectText.text = "ACTIVE";
         selectButton.interactable = false;
         PlayerPrefs.SetString("background", backgrounds[currentIndex].Name);
+        if (backgrounds[currentIndex].Name == "Night")
+        {
+            achievementManager.UnlockAchievement("Back To The Roots");
+        }
         Debug.Log("Current bg name: " + backgrounds[currentIndex].Name);
         CallFadeIn();
 
@@ -182,7 +202,7 @@ public class BackgroundShop : MonoBehaviour
     }
     void OnDestroy()
     {
-        // Unsubscribe to avoid memory leaks
+        // unsubscribe to avoid memory leaks
         if (confirmationScript != null)
         {
             confirmationScript.OnConfirmPress -= HandleConfirm;

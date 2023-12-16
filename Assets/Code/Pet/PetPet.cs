@@ -15,7 +15,7 @@ public class PetPet : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI currencyText;
     [SerializeField] private Transform transformMainCanvas;
-
+    public AchievementManager achievementManager;
 
     // the heart that will pop out of the pet
     public GameObject heartPrefab;
@@ -36,6 +36,19 @@ public class PetPet : MonoBehaviour
             lastTapTime = Time.time;
             int currency = CurrencyHandler.LoadCurrency();
             currency++;
+            if (currency >= 10)
+            {
+                achievementManager.UnlockAchievement("Love Is In The Air!");
+            }
+            if (currency >= 50)
+            {
+                achievementManager.UnlockAchievement("Baby Don't Hurt Me");
+            }
+            if (currency >= 100)
+            {
+                achievementManager.UnlockAchievement("I'm Lovin' It");
+            }
+            
             CurrencyHandler.SaveCurrency(currency);
             UpdateCurrencyUI();
             StartCoroutine(ShowHeartEffect());

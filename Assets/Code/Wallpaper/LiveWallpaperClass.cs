@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class LiveWallpaperClass : MonoBehaviour
 {
-    private void Start()
-    {
-        Application.targetFrameRate = 10;
-    }
     void Update()
     {
         #if !UNITY_EDITOR

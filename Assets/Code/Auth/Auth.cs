@@ -7,6 +7,7 @@ public class Auth : MonoBehaviour
 {
     async void Start()
     {
+        
         await UnityServices.InitializeAsync();
         await SignInAnonymous();
     }

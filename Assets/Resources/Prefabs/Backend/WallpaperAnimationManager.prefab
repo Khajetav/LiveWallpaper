@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &785610009015353286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8527356811378310640}
+  - component: {fileID: 4396241243964041655}
+  - component: {fileID: 3598453295977804870}
+  - component: {fileID: 2777843340580130043}
+  m_Layer: 0
+  m_Name: WallpaperAnimationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8527356811378310640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785610009015353286}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 218.12872, y: -542.7068, z: 12.045883}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4396241243964041655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785610009015353286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6fd44ae3529384b86a2b7ad2b91eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sky: {fileID: 0}
+  Floor: {fileID: 0}
+  Fog: {fileID: 0}
+--- !u!114 &3598453295977804870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785610009015353286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a18ee413538114d8d4e6f85ff2b6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyImage: {fileID: 0}
+  floorImage: {fileID: 0}
+  spritesTreeNight:
+  - {fileID: 2800000, guid: f681eb0fc8a2a834296bb92a4d0cc9cb, type: 3}
+  spritesTreeDay:
+  - {fileID: 2800000, guid: 073699440bb76054395ff008513a864f, type: 3}
+  spritesTreeNightJungle:
+  - {fileID: 2800000, guid: 4b08ec15b4221174eba019e14bc473c6, type: 3}
+  spritesTreeDayJungle:
+  - {fileID: 2800000, guid: 060e9b7f52a60b7439e5d5e102eaa32f, type: 3}
+  spritesMountainNight:
+  - {fileID: 2800000, guid: 11424b7117414cc499590d277c6a9f4f, type: 3}
+  spritesMountainDay:
+  - {fileID: 2800000, guid: d64c44ef14f9e1549b7bd920a44632c2, type: 3}
+  spritesMountainNightJungle:
+  - {fileID: 2800000, guid: bba79c3323e0bac4e8dc546dbd2f76dd, type: 3}
+  spritesMountainDayJungle:
+  - {fileID: 2800000, guid: 6e6cae5cbc0f29c45a25aa1174eb2de8, type: 3}
+  skyImageNight: {fileID: 2800000, guid: 4491576506e1961418fd51e22d92c8b7, type: 3}
+  skyImageDay: {fileID: 2800000, guid: 4ec44f8035cb0c246b44843087c54557, type: 3}
+  skyImageNightJungle: {fileID: 2800000, guid: 10b11922e505fe4449a45cf0905f40c9, type: 3}
+  skyImageDayJungle: {fileID: 2800000, guid: d3119cbe0e7347246b54a8c1d0fc1690, type: 3}
+  floorImageNight: {fileID: 2800000, guid: 69d00260b6c13bb47bae1a7ff1e25494, type: 3}
+  floorImageDay: {fileID: 2800000, guid: 5d8e3f2240d13fb478c20cf5c93b33fb, type: 3}
+  floorImageNightJungle: {fileID: 2800000, guid: 07a04b14dccbd62448cb0183c53368ee, type: 3}
+  floorImageDayJungle: {fileID: 2800000, guid: 02b64f9051da7c5478875aebca7d90aa, type: 3}
+--- !u!114 &2777843340580130043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785610009015353286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80756a8218452d3449d850ad56a0e6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudObject: {fileID: 2234902998052055397, guid: 9951e4e856754b6499856b150b2daba7, type: 3}
+  cloudParent: {fileID: 0}
+  cloudSprites:
+  - {fileID: 2800000, guid: 55edbad97953abb46acd17f3bc8f8bbc, type: 3}
+  - {fileID: 2800000, guid: 961aabc99593a08498b91ecf9b8301fb, type: 3}
+  - {fileID: 2800000, guid: f82371bfce7537242b1048040d31b7ec, type: 3}
+  - {fileID: 2800000, guid: 262604217c549d54eb844d12ca0edfcc, type: 3}
+  - {fileID: 2800000, guid: 0e9f51e01ebcb824fbd4d4ab165d9e10, type: 3}
+  - {fileID: 2800000, guid: b7295e4f957652b4c8967b146d7a8974, type: 3}
+  mountainObject: {fileID: 7362292661679455598, guid: 5d639195855b5714bb6e9d524ad65036, type: 3}
+  mountainParent: {fileID: 0}
+  mountainSprites: []
+  treeParent: {fileID: 0}
+  treeObject: {fileID: 4849487042273090986, guid: 6a490047035b89b4d83d9826aabe3cf8, type: 3}
+  treeSprites:
+  - {fileID: 2800000, guid: 283b72ca53109714d883bfe32f169bec, type: 3}
+  - {fileID: 2800000, guid: 4078a4f9a87eb7b43beff19687835193, type: 3}
+  cloudSpeed: 6
+  mountainSpeed: 2
+  treeSpeed: 20
+  cloudDespawnDistance: 10
+  mountainDespawnDistance: 100
+  treeDespawnDistance: 50
+  cloudSpawnDistance: 20
+  mountainSpawnDistance: 1000
+  treeSpawnDistance: 200
+  cloudSpawnFrequency: 50
+  mountainSpawnFrequency: 600
+  treeSpawnFrequency: 20

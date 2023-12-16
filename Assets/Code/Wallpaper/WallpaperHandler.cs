@@ -51,30 +51,30 @@ public class WallpaperHandler : MonoBehaviour
                 // handle the floor
                 floorImage.texture = floorImageNight;
                 // handle the trees
-                backgroundObjectHandler.treeSprites = spritesTreeNight;
+                backgroundObjectHandler.treeSettings.sprites = spritesTreeNight;
                 // handle the mountains/background whatever
-                backgroundObjectHandler.mountainSprites = spritesMountainNight;
+                backgroundObjectHandler.mountainSettings.sprites = spritesMountainNight;
                 break;
 
             case "Day":
                 skyImage.texture = skyImageDay;
                 floorImage.texture = floorImageDay;
-                backgroundObjectHandler.treeSprites = spritesTreeDay;
-                backgroundObjectHandler.mountainSprites = spritesMountainDay;
+                backgroundObjectHandler.treeSettings.sprites = spritesTreeDay;
+                backgroundObjectHandler.mountainSettings.sprites = spritesMountainDay;
                 break;
 
             case "NightJungle":
                 skyImage.texture = skyImageNightJungle;
                 floorImage.texture = floorImageNightJungle;
-                backgroundObjectHandler.treeSprites = spritesTreeNightJungle;
-                backgroundObjectHandler.mountainSprites = spritesMountainNightJungle;
+                backgroundObjectHandler.treeSettings.sprites = spritesTreeNightJungle;
+                backgroundObjectHandler.mountainSettings.sprites = spritesMountainNightJungle;
                 break;
 
             case "DayJungle":
                 skyImage.texture = skyImageDayJungle;
                 floorImage.texture = floorImageDayJungle;
-                backgroundObjectHandler.treeSprites = spritesTreeDayJungle;
-                backgroundObjectHandler.mountainSprites = spritesMountainDayJungle ;
+                backgroundObjectHandler.treeSettings.sprites = spritesTreeDayJungle;
+                backgroundObjectHandler.mountainSettings.sprites = spritesMountainDayJungle ;
                 break;
 
 

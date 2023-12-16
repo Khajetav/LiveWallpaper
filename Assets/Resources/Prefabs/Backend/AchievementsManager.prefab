@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &247029826844328910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8743869393690302287}
+  - component: {fileID: 1969003897552849867}
+  m_Layer: 0
+  m_Name: AchievementsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8743869393690302287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247029826844328910}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969003897552849867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247029826844328910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c2fa936c794314988d4a4e544986e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievements:
+  - name: Back To The Roots
+    imageAchievement: {fileID: 2048742936835184639, guid: 533a562c3ab8cac4c8ccebab6e527a06, type: 3}
+    description: Select the night theme again!
+  - name: All Your Baseballs Are Belong To Us
+    imageAchievement: {fileID: 6234176133674011997, guid: 6e5e1e814168b654e9d97b413ef39cbe, type: 3}
+    description: Buy the baseball hat!
+  - name: Background Keeper
+    imageAchievement: {fileID: 21300000, guid: 774fff3760ccff145925540a1dfb8d6b, type: 3}
+    description: Buy all the backgrounds!
+  - name: Click!
+    imageAchievement: {fileID: 3496416976752381988, guid: 44fc0d05e9d4539438e2679cbe65cb61, type: 3}
+    description: You clicked this!
+  - name: Morning!
+    imageAchievement: {fileID: 21300000, guid: 121f148d3e15a8e4e816caa74cb5ca75, type: 3}
+    description: Rise and shine!
+  - name: Wood Needed
+    imageAchievement: {fileID: 21300000, guid: b28228aea5c364e4f99ae82ee8086bfa, type: 3}
+    description: Unlock the day jungle background!
+  - name: Go Green!
+    imageAchievement: {fileID: -2735574413917233763, guid: 0480583e5ea789840a219e23eee79fec, type: 3}
+    description: Get a new shell for your turtle.
+  - name: Hat.
+    imageAchievement: {fileID: 7476113455791135797, guid: a6fecdd4e94149349a525a70dddb06af, type: 3}
+    description: Hat hat hat.
+  - name: Hat On A Hat On A Hat
+    imageAchievement: {fileID: -6265879617495022991, guid: 14314b452121db642ab345ead961ad66, type: 3}
+    description: Fat Cat Hat Rat Mat Pat
+  - name: Love Is In The Air!
+    imageAchievement: {fileID: 21300000, guid: 6fa2637dbaa10b244bec608d32db6480, type: 3}
+    description: Collect 10 hearts!
+  - name: Baby Don't Hurt Me
+    imageAchievement: {fileID: 21300000, guid: 8bfdddf32dc5c7f44a1ecf4c07bd298e, type: 3}
+    description: Collect 50 hearts!
+  - name: I'm Lovin' It
+    imageAchievement: {fileID: 21300000, guid: bfa2c97ef8d7e7e43a93d83efe97b2f8, type: 3}
+    description: Collect 100 hearts!
+  - name: It's Cold Out There
+    imageAchievement: {fileID: 21300000, guid: e1763e1c9521e1648b405b0030066822, type: 3}
+    description: Unlock the night jungle wallpaper.
+  - name: This Or That
+    imageAchievement: {fileID: -7126020311410059744, guid: ddf12366aea5aee45b8ed5e9b75446a5, type: 3}
+    description: Change wallpapers 5 times.
+  - name: Hello World
+    imageAchievement: {fileID: 21300000, guid: bc520decd8615d84191e3cd5995c92e6, type: 3}
+    description: Welcome!
+  - name: Bottom Top Hat
+    imageAchievement: {fileID: -1836120431684336037, guid: b004e949c423b324a935e1b32e4ee501, type: 3}
+    description: Now that's fancy!
+  achievementNotificationPrefab: {fileID: 1110088612175894022, guid: 2ae7990a6ccf1f545b1661a54182fb09, type: 3}
+  notificationDisplayTime: 2
