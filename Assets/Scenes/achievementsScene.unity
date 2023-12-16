@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7250061, y: 4.5500054}
+  m_AnchoredPosition: {x: -1.7250061, y: 4.549988}
   m_SizeDelta: {x: -35.949997, y: -34.30001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3763877
@@ -1018,8 +1018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: -1.19}
+  m_SizeDelta: {x: -160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218851128
 MonoBehaviour:
@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 10
   m_fontSizeMax: 90
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -1153,10 +1153,10 @@ RectTransform:
   - {fileID: 984182829}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 930, y: -645}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236530387
 MonoBehaviour:
@@ -1201,7 +1201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GoGreen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &273357211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,10 +1607,10 @@ RectTransform:
   - {fileID: 2134901551}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 670, y: -645}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301346126
 MonoBehaviour:
@@ -1643,7 +1655,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ThisOrThat
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &322887735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,10 +2914,10 @@ RectTransform:
   - {fileID: 1054086583}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -645}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &489389406
 MonoBehaviour:
@@ -2938,7 +2962,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bookshelf
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &492271397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,10 +3008,10 @@ RectTransform:
   - {fileID: 1740454748}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 410, y: -905}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492271399
 MonoBehaviour:
@@ -3020,7 +3056,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Base
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &522008503
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,10 +3290,10 @@ RectTransform:
   - {fileID: 1586724353}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 410, y: -125}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593327687
 MonoBehaviour:
@@ -3290,7 +3338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Heart
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &632181289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,10 +3937,10 @@ RectTransform:
   - {fileID: 421572176}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 670, y: -385}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768337399
 MonoBehaviour:
@@ -3925,7 +3985,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Day
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &830825685
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,6 +4161,10 @@ GameObject:
   - component: {fileID: 872700515}
   - component: {fileID: 872700518}
   - component: {fileID: 872700517}
+  - component: {fileID: 872700519}
+  - component: {fileID: 872700520}
+  - component: {fileID: 872700522}
+  - component: {fileID: 872700521}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4160,6 +4236,142 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7578950dbcbd0424585cc57d5e4a023f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &872700519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e404f2bdd940a3f41b1e4f60aaf74620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAchievementTitle: {fileID: 218851128}
+  textAchievementDescription: {fileID: 1559248025}
+  clickPanel: {fileID: 1358347734}
+  achievementManager: {fileID: 872700521}
+--- !u!114 &872700520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393845b8ac510a0408886027707bc450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backToTheRootsPanel: {fileID: 459997643}
+  basePanel: {fileID: 425066111}
+  bookshelfPanel: {fileID: 1529415607}
+  clickPanel: {fileID: 1358347734}
+  dayPanel: {fileID: 1366289201}
+  dayJunglePanel: {fileID: 273357211}
+  goGreenPanel: {fileID: 1832997450}
+  hatPanel: {fileID: 632181289}
+  tophatPanel: {fileID: 736800668}
+  hatOnAHatOnAHatPanel: {fileID: 560979114}
+  heartPanel: {fileID: 276594563}
+  heartsPanel: {fileID: 435878778}
+  heartssPanel: {fileID: 460831778}
+  nightJunglePanel: {fileID: 522008503}
+  thisOrThatPanel: {fileID: 410307982}
+  wavePanel: {fileID: 1727754064}
+--- !u!114 &872700521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c2fa936c794314988d4a4e544986e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notificationManager: {fileID: 872700522}
+  achievements:
+  - name: Back To The Roots
+    imageAchievement: {fileID: 2048742936835184639, guid: 533a562c3ab8cac4c8ccebab6e527a06, type: 3}
+    description: Select the night theme again!
+    isUnlocked: 0
+  - name: All Your Baseballs Are Belong To Us
+    imageAchievement: {fileID: 6234176133674011997, guid: 6e5e1e814168b654e9d97b413ef39cbe, type: 3}
+    description: Buy the baseball hat!
+    isUnlocked: 0
+  - name: Background Keeper
+    imageAchievement: {fileID: 21300000, guid: 774fff3760ccff145925540a1dfb8d6b, type: 3}
+    description: Buy all the backgrounds!
+    isUnlocked: 0
+  - name: Click!
+    imageAchievement: {fileID: 3496416976752381988, guid: 44fc0d05e9d4539438e2679cbe65cb61, type: 3}
+    description: You clicked this!
+    isUnlocked: 0
+  - name: Morning!
+    imageAchievement: {fileID: 21300000, guid: 121f148d3e15a8e4e816caa74cb5ca75, type: 3}
+    description: Rise and shine!
+    isUnlocked: 0
+  - name: Wood Needed
+    imageAchievement: {fileID: 21300000, guid: b28228aea5c364e4f99ae82ee8086bfa, type: 3}
+    description: Unlock the day jungle background!
+    isUnlocked: 0
+  - name: Go Green!
+    imageAchievement: {fileID: -2735574413917233763, guid: 0480583e5ea789840a219e23eee79fec, type: 3}
+    description: Get a new shell for your turtle.
+    isUnlocked: 0
+  - name: Hat.
+    imageAchievement: {fileID: 7476113455791135797, guid: a6fecdd4e94149349a525a70dddb06af, type: 3}
+    description: Hat hat hat.
+    isUnlocked: 0
+  - name: Hat On A Hat On A Hat
+    imageAchievement: {fileID: -6265879617495022991, guid: 14314b452121db642ab345ead961ad66, type: 3}
+    description: Fat Cat Hat Rat Mat Pat
+    isUnlocked: 0
+  - name: Love Is In The Air!
+    imageAchievement: {fileID: 21300000, guid: 6fa2637dbaa10b244bec608d32db6480, type: 3}
+    description: Collect 10 hearts!
+    isUnlocked: 0
+  - name: Baby Don't Hurt Me
+    imageAchievement: {fileID: 21300000, guid: 8bfdddf32dc5c7f44a1ecf4c07bd298e, type: 3}
+    description: Collect 50 hearts!
+    isUnlocked: 0
+  - name: I'm Lovin' It
+    imageAchievement: {fileID: 21300000, guid: bfa2c97ef8d7e7e43a93d83efe97b2f8, type: 3}
+    description: Collect 100 hearts!
+    isUnlocked: 0
+  - name: It's Cold Out There
+    imageAchievement: {fileID: 21300000, guid: e1763e1c9521e1648b405b0030066822, type: 3}
+    description: Unlock the night jungle wallpaper.
+    isUnlocked: 0
+  - name: This Or That
+    imageAchievement: {fileID: -7126020311410059744, guid: ddf12366aea5aee45b8ed5e9b75446a5, type: 3}
+    description: Change wallpapers 5 times.
+    isUnlocked: 0
+  - name: Hello World
+    imageAchievement: {fileID: 21300000, guid: bc520decd8615d84191e3cd5995c92e6, type: 3}
+    description: Welcome!
+    isUnlocked: 0
+  - name: Bottom Top Hat
+    imageAchievement: {fileID: -1836120431684336037, guid: b004e949c423b324a935e1b32e4ee501, type: 3}
+    description: Now that's fancy!
+    isUnlocked: 0
+--- !u!114 &872700522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c4d953dcc8f6243a556575961affc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementNotificationPrefab: {fileID: 1110088612175894022, guid: 2ae7990a6ccf1f545b1661a54182fb09, type: 3}
+  displayTime: 2
 --- !u!1 &883488715
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,10 +4471,10 @@ RectTransform:
   - {fileID: 488499100}
   - {fileID: 592156364}
   - {fileID: 693898484}
-  - {fileID: 970205234}
   - {fileID: 369177851}
   - {fileID: 218851127}
   - {fileID: 1559248024}
+  - {fileID: 970205234}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4437,10 +4649,10 @@ RectTransform:
   - {fileID: 1070257678}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 670, y: -125}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922790997
 MonoBehaviour:
@@ -4485,7 +4697,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hearts
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &958026566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5963,10 +6187,10 @@ RectTransform:
   - {fileID: 855459980}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -125}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293667672
 MonoBehaviour:
@@ -6011,7 +6235,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Wave
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1304074010
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,10 +6522,10 @@ RectTransform:
   - {fileID: 1850737968}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 410, y: -645}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1354963966
 MonoBehaviour:
@@ -6334,7 +6570,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1358347734
 GameObject:
   m_ObjectHideFlags: 0
@@ -7102,10 +7350,10 @@ RectTransform:
   - {fileID: 1841111877}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -385}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550988405
 MonoBehaviour:
@@ -7150,7 +7398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BackToTheRoots
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1559248023
 GameObject:
   m_ObjectHideFlags: 0
@@ -7208,7 +7468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Open up the game.
+  m_text: You can view your achievements here.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7531,10 +7791,10 @@ RectTransform:
   - {fileID: 322887736}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -905}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1592925343
 MonoBehaviour:
@@ -7579,7 +7839,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hat
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1684481489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7914,10 +8186,10 @@ RectTransform:
   - {fileID: 1481739195}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 930, y: -125}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796377744
 MonoBehaviour:
@@ -7962,7 +8234,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Heartss
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1832997450
 GameObject:
   m_ObjectHideFlags: 0
@@ -8221,10 +8505,10 @@ RectTransform:
   - {fileID: 1958721326}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 670, y: -905}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857224577
 MonoBehaviour:
@@ -8269,7 +8553,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tophat
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1895814370
 GameObject:
   m_ObjectHideFlags: 0
@@ -8454,10 +8750,10 @@ RectTransform:
   - {fileID: 830825686}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 410, y: -385}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996767935
 MonoBehaviour:
@@ -8502,7 +8798,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: NightJungle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2017108704
 GameObject:
   m_ObjectHideFlags: 0
@@ -8612,10 +8920,10 @@ RectTransform:
   - {fileID: 1107927155}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 930, y: -905}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075824666
 MonoBehaviour:
@@ -8660,7 +8968,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HatOnAHatOnAHat
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2132613284
 GameObject:
   m_ObjectHideFlags: 0
@@ -8694,10 +9014,10 @@ RectTransform:
   - {fileID: 63746795}
   m_Father: {fileID: 377860160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 930, y: -385}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2132613286
 MonoBehaviour:
@@ -8742,7 +9062,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 872700519}
+        m_TargetAssemblyTypeName: AchievementDescriptions, Assembly-CSharp
+        m_MethodName: ChangeAchievement
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DayJungle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2134901550
 GameObject:
   m_ObjectHideFlags: 0
