@@ -75,7 +75,7 @@ public class AccessoryShop : MonoBehaviour
         {
             achievementManager.UnlockAchievement("Bottom Top Hat");
         }
-        if (PlayerPrefs.GetInt("All Your Baseballs Are Belong To Us!") == 1 && PlayerPrefs.GetInt("Hat.") == 1 && PlayerPrefs.GetInt("Bottom Top Hat") == 1)
+        if (PlayerPrefs.GetInt("All Your Baseballs Are Belong To Us") == 1 && PlayerPrefs.GetInt("Hat.") == 1 && PlayerPrefs.GetInt("Bottom Top Hat") == 1)
         {
             achievementManager.UnlockAchievement("Hat On A Hat On A Hat");
         }

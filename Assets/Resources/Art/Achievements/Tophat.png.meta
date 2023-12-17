@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a71de5c98ae98aa428be24b269b231d4
+guid: dedb505b4f9a14e43b1f08d26ada7eb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5777892662802895278
-    second: FancyHat_0
+      213: 7218629034000331544
+    second: Tophat_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FancyHat_0
+      name: Tophat_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 52
-        height: 28
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea1d3b4a3c23f2050800000000000000
-      internalID: 5777892662802895278
+      spriteID: 81339e84cd8bd2460800000000000000
+      internalID: 7218629034000331544
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FancyHat_0: 5777892662802895278
+      Tophat_0: 7218629034000331544
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

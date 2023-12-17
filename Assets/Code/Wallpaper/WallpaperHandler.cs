@@ -8,6 +8,10 @@ using UnityEngine.UI;
 // end user has selected to be as the default wallpaper
 public class WallpaperHandler : MonoBehaviour
 {
+    private void Start()
+    {
+        WallpaperUpdate();
+    }
     private BackgroundObjectHandler backgroundObjectHandler;
     
     [SerializeField] private RawImage skyImage;
