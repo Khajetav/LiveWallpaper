@@ -19,7 +19,7 @@ public class AchievementDescriptions : MonoBehaviour
                 SetAchievement("All Your Baseballs Are Belong To Us", "Buy the baseball hat!");
                 break;
             case "Bookshelf":
-                SetAchievement("Background Keeper", "Buy all the backgrounds!");
+                SetAchievement("Background Keeper", "Buy all the accessories!");
                 break;
             case "Click":
                 SetAchievement("Click!", "You clicked this!");

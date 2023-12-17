@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: a6fecdd4e94149349a525a70dddb06af
+guid: 046b911084f4c7d4ebf1a1147505098f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7476113455791135797
-    second: HattyHat_0
+      213: -6551620018809892716
+    second: Statistics_0
+  - first:
+      213: -5858269946062417610
+    second: Statistics_1
+  - first:
+      213: -4683736166951683946
+    second: Statistics_2
+  - first:
+      213: 6303924373005327997
+    second: Statistics_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HattyHat_0
+      name: Statistics_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 44
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +162,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53cd2f0f39d70c760800000000000000
-      internalID: 7476113455791135797
+      spriteID: 4909f7b0e48f315a0800000000000000
+      internalID: -6551620018809892716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Statistics_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0
+        width: 44
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6315a92c58e33bea0800000000000000
+      internalID: -5858269946062417610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Statistics_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 44
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698f13b85c6000fb0800000000000000
+      internalID: -4683736166951683946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Statistics_3
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 44
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ed8ef41d90c7750800000000000000
+      internalID: 6303924373005327997
       vertices: []
       indices: 
       edges: []
@@ -170,7 +242,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HattyHat_0: 7476113455791135797
+      Statistics_0: -6551620018809892716
+      Statistics_1: -5858269946062417610
+      Statistics_2: -4683736166951683946
+      Statistics_3: 6303924373005327997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a6fecdd4e94149349a525a70dddb06af
+guid: 8fadb8dac7aa26c4bb04ed9f542b74cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7476113455791135797
-    second: HattyHat_0
+      213: 3483360546945567320
+    second: None_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HattyHat_0
+      name: None_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 1
+        height: 1
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53cd2f0f39d70c760800000000000000
-      internalID: 7476113455791135797
+      spriteID: 85a0d4936f1675030800000000000000
+      internalID: 3483360546945567320
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HattyHat_0: 7476113455791135797
+      None_0: 3483360546945567320
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

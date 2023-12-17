@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a6fecdd4e94149349a525a70dddb06af
+guid: 24fa85b800be4b240ac0df93d3631f0e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7476113455791135797
-    second: HattyHat_0
+      213: 3742976054023078668
+    second: Bald_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HattyHat_0
+      name: Bald_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53cd2f0f39d70c760800000000000000
-      internalID: 7476113455791135797
+      spriteID: c03c6d6d3e8b1f330800000000000000
+      internalID: 3742976054023078668
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HattyHat_0: 7476113455791135797
+      Bald_0: 3742976054023078668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

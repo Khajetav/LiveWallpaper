@@ -6,32 +6,49 @@ using UnityEngine.SceneManagement;
 
 public class FadeLogic : MonoBehaviour
 {
-    public Image panelImage;
-    [SerializeField]
-    private Scene sceneName;
+    [SerializeField] private GameObject panelFadePrefab;
+    private Canvas canvas;
+
+    // call LoadSceneAfterFade("sceneMain") or something
 
     void Start()
     {
-        panelImage = GameObject.Find("PanelFade").GetComponent<Image>();
-        StartCoroutine(FadeOut(() => Debug.Log("Fade Out Complete!")));
-    }
-
-    public void CallFadeIn(Action onCompleted = null)
-    {
-        StartCoroutine(FadeIn(onCompleted));
+        canvas = FindFirstObjectByType<Canvas>(); 
+        InstantiateAndFadeOut();
     }
 
     public void LoadSceneAfterFade(string sceneName)
     {
-        StartCoroutine(FadeIn(() => SceneManager.LoadScene(sceneName)));
-    }
-    public void CallFadeOut(Action onCompleted = null)
-    {
-        StartCoroutine(FadeOut(() => SceneManager.LoadScene("mainScene")));
+        InstantiateAndFadeIn(() => SceneManager.LoadScene(sceneName));
     }
 
-    IEnumerator FadeIn(Action onCompleted)
+    // once the scene is loaded in
+    // spawn the panel
+    // and fade it out
+    private void InstantiateAndFadeOut(Action onCompleted = null)
     {
+        GameObject panelFade = Instantiate(panelFadePrefab, canvas.transform, false);
+        Image panelImage = panelFade.GetComponent<Image>();
+        StartCoroutine(FadeOut(panelImage, () =>
+        {
+            Destroy(panelFade);
+            onCompleted?.Invoke();
+        }));
+    }
+
+    // create a panel
+    // and slowly fade it in
+    private void InstantiateAndFadeIn(Action onCompleted)
+    {
+        GameObject panelFade = Instantiate(panelFadePrefab, canvas.transform, false);
+        Image panelImage = panelFade.GetComponent<Image>();
+        StartCoroutine(FadeIn(panelImage, onCompleted));
+    }
+
+    #region animations
+    IEnumerator FadeIn(Image panelImage, Action onCompleted)
+    {
+        panelImage.gameObject.SetActive(true);
         float duration = 1f;
         float elapsed = 0;
 
@@ -46,7 +63,7 @@ public class FadeLogic : MonoBehaviour
         onCompleted?.Invoke();
     }
 
-    IEnumerator FadeOut(Action onCompleted)
+    IEnumerator FadeOut(Image panelImage, Action onCompleted)
     {
         float duration = 1f;
         float elapsed = 0;
@@ -61,4 +78,6 @@ public class FadeLogic : MonoBehaviour
 
         onCompleted?.Invoke();
     }
+    #endregion
+
 }

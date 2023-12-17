@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8616284820637025250}
   - component: {fileID: 5860784548709263021}
   - component: {fileID: 2603070164447549431}
+  - component: {fileID: 3668013168929435830}
   m_Layer: 0
   m_Name: OptimisationManager
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2596757303542420700}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1076.2023, y: -1672.7039, z: 1.6059296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -82,5 +83,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f1953063cc9bd143a79db731a5d38e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3668013168929435830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596757303542420700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a626f27ff41b679429dc43fb68cb4f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
