@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2cd526d5e740eac4da9edbdae92fd628
+guid: 74f98e40a6e96f9409cd97c6b874c14c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4883577625058657819
-    second: BaseballHat_0
+      213: -1119500722361351661
+    second: BaseballHatNew_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BaseballHat_0
+      name: BaseballHatNew_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e93559360c0a3cb0800000000000000
-      internalID: -4883577625058657819
+      spriteID: 312cbdd360cb670f0800000000000000
+      internalID: -1119500722361351661
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BaseballHat_0: -4883577625058657819
+      BaseballHatNew_0: -1119500722361351661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

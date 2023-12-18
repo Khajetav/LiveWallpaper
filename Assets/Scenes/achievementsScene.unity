@@ -2921,7 +2921,7 @@ MonoBehaviour:
   textAchievementTitle: {fileID: 218851128}
   textAchievementDescription: {fileID: 1559248025}
   clickPanel: {fileID: 1358347734}
-  achievementManager: {fileID: 0}
+  achievementManager: {fileID: 2291892661772458096}
 --- !u!114 &872700520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3784,7 +3784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2735574413917233763, guid: 0480583e5ea789840a219e23eee79fec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83e2b27f4be67984fbe1d2aa0891f505, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3860,7 +3860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dedb505b4f9a14e43b1f08d26ada7eb9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3762704fcbb1ee438b8d3fc9a206f8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5492,7 +5492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2cd526d5e740eac4da9edbdae92fd628, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74f98e40a6e96f9409cd97c6b874c14c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6376,7 +6376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 46fba640773c8c046a2ac02d262fb10a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0285b1f25b1a1c946bedffe0fc16ca8c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6669,18 +6669,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AchievementsManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1969003897552849867, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
-      propertyPath: achievements.Array.data[1].imageAchievement
-      value: 
-      objectReference: {fileID: 21300000, guid: 6e5e1e814168b654e9d97b413ef39cbe, type: 3}
-    - target: {fileID: 1969003897552849867, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
-      propertyPath: achievements.Array.data[7].imageAchievement
-      value: 
-      objectReference: {fileID: 21300000, guid: a6fecdd4e94149349a525a70dddb06af, type: 3}
-    - target: {fileID: 1969003897552849867, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
-      propertyPath: achievements.Array.data[15].imageAchievement
-      value: 
-      objectReference: {fileID: 21300000, guid: b004e949c423b324a935e1b32e4ee501, type: 3}
     - target: {fileID: 8743869393690302287, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6731,6 +6719,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8743869393690302287, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
   m_PrefabInstance: {fileID: 2291892661772458094}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2291892661772458096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1969003897552849867, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
+  m_PrefabInstance: {fileID: 2291892661772458094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c2fa936c794314988d4a4e544986e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2448509466780605567
 PrefabInstance:
   m_ObjectHideFlags: 0

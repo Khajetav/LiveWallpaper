@@ -7,6 +7,6 @@ public class HelloAchievement : MonoBehaviour
     public AchievementManager achievementManager;
     void Start()
     {
-        achievementManager.UnlockAchievement("Hello!");
+        achievementManager.UnlockAchievement("Hello World");
     }
 }

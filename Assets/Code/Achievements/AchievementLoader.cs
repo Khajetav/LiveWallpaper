@@ -40,7 +40,7 @@ public class AchievementLoader : MonoBehaviour
         if (PlayerPrefs.GetInt("Wood Needed") == 1)
             dayJunglePanel.SetActive(false);
 
-        if (PlayerPrefs.GetInt("Go Green!") == 1)
+        if (PlayerPrefs.GetInt("You Did It.") == 1)
             goGreenPanel.SetActive(false);
 
         if (PlayerPrefs.GetInt("Hat.") == 1)

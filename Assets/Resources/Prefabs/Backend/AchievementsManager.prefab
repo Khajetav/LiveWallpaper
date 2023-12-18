@@ -49,7 +49,7 @@ MonoBehaviour:
     imageAchievement: {fileID: 2048742936835184639, guid: 533a562c3ab8cac4c8ccebab6e527a06, type: 3}
     description: Select the night theme again!
   - name: All Your Baseballs Are Belong To Us
-    imageAchievement: {fileID: 6234176133674011997, guid: 6e5e1e814168b654e9d97b413ef39cbe, type: 3}
+    imageAchievement: {fileID: 21300000, guid: 74f98e40a6e96f9409cd97c6b874c14c, type: 3}
     description: Buy the baseball hat!
   - name: Background Keeper
     imageAchievement: {fileID: 21300000, guid: 774fff3760ccff145925540a1dfb8d6b, type: 3}
@@ -63,11 +63,11 @@ MonoBehaviour:
   - name: Wood Needed
     imageAchievement: {fileID: 21300000, guid: b28228aea5c364e4f99ae82ee8086bfa, type: 3}
     description: Unlock the day jungle background!
-  - name: Go Green!
-    imageAchievement: {fileID: -2735574413917233763, guid: 0480583e5ea789840a219e23eee79fec, type: 3}
-    description: Get a new shell for your turtle.
+  - name: You Did It.
+    imageAchievement: {fileID: 21300000, guid: 83e2b27f4be67984fbe1d2aa0891f505, type: 3}
+    description: You pressed it.
   - name: Hat.
-    imageAchievement: {fileID: 7476113455791135797, guid: a6fecdd4e94149349a525a70dddb06af, type: 3}
+    imageAchievement: {fileID: 21300000, guid: 0285b1f25b1a1c946bedffe0fc16ca8c, type: 3}
     description: Hat hat hat.
   - name: Hat On A Hat On A Hat
     imageAchievement: {fileID: -6265879617495022991, guid: 14314b452121db642ab345ead961ad66, type: 3}
@@ -91,7 +91,7 @@ MonoBehaviour:
     imageAchievement: {fileID: 21300000, guid: bc520decd8615d84191e3cd5995c92e6, type: 3}
     description: Welcome!
   - name: Bottom Top Hat
-    imageAchievement: {fileID: -1836120431684336037, guid: b004e949c423b324a935e1b32e4ee501, type: 3}
+    imageAchievement: {fileID: 21300000, guid: d3762704fcbb1ee438b8d3fc9a206f8f, type: 3}
     description: Now that's fancy!
   achievementNotificationPrefab: {fileID: 1110088612175894022, guid: 2ae7990a6ccf1f545b1661a54182fb09, type: 3}
   notificationDisplayTime: 2

@@ -4,24 +4,27 @@ public class FocusManager : MonoBehaviour
 {
     void OnApplicationFocus(bool hasFocus)
     {
-        if (!hasFocus)
+        if (PlayerPrefs.GetString("optimisationToggle") == "ON")
         {
-            Time.timeScale = 0;
-            AudioListener.pause = true;
-            var allBehaviours = FindObjectsOfType<MonoBehaviour>(true);
-            foreach (var behaviour in allBehaviours)
+            if (!hasFocus)
             {
-                behaviour.enabled = false;
+                Time.timeScale = 0;
+                AudioListener.pause = true;
+                var allBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
+                foreach (var behaviour in allBehaviours)
+                {
+                    behaviour.enabled = false;
+                }
             }
-        }
-        else
-        {
-            Time.timeScale = 1;
-            AudioListener.pause = false;
-            var allBehaviours = FindObjectsOfType<MonoBehaviour>(true);
-            foreach (var behaviour in allBehaviours)
+            else
             {
-                behaviour.enabled = true;
+                Time.timeScale = 1;
+                AudioListener.pause = false;
+                var allBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
+                foreach (var behaviour in allBehaviours)
+                {
+                    behaviour.enabled = true;
+                }
             }
         }
     }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0285b1f25b1a1c946bedffe0fc16ca8c
+guid: 83e2b27f4be67984fbe1d2aa0891f505
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5092492510813655302
-    second: HattyHatnew_0
+      213: -6799849976341487273
+    second: Bastard 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HattyHatnew_0
+      name: Bastard 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: afe6d97ea05d359b0800000000000000
-      internalID: -5092492510813655302
+      spriteID: 751a732497412a1a0800000000000000
+      internalID: -6799849976341487273
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HattyHatnew_0: -5092492510813655302
+      Bastard 1_0: -6799849976341487273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

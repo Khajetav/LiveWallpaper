@@ -33,7 +33,7 @@ public class AchievementDescriptions : MonoBehaviour
                 SetAchievement("Wood Needed", "Unlock the day jungle background!");
                 break;
             case "GoGreen":
-                SetAchievement("Go Green!", "Get a new shell for your turtle.");
+                SetAchievement("You Did It.", "You pressed it.");
                 break;
             case "Hat":
                 SetAchievement("Hat.", "Hat hat hat.");

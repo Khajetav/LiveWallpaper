@@ -4,25 +4,27 @@ public class PauseManager : MonoBehaviour
 {
     void OnApplicationPause(bool isPaused)
     {
-        if (isPaused)
+        if (PlayerPrefs.GetString("optimisationToggle") == "ON")
         {
-            Time.timeScale = 0;
-            AudioListener.pause = true;
-            // deprecated, but oh well
-            var allBehaviours = FindObjectsOfType<MonoBehaviour>(true);
-            foreach (var behaviour in allBehaviours)
+            if (isPaused)
             {
-                behaviour.enabled = false;
+                Time.timeScale = 0;
+                AudioListener.pause = true;
+                var allBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
+                foreach (var behaviour in allBehaviours)
+                {
+                    behaviour.enabled = false;
+                }
             }
-        }
-        else
-        {
-            Time.timeScale = 1;
-            AudioListener.pause = false;
-            var allBehaviours = FindObjectsOfType<MonoBehaviour>(true);
-            foreach (var behaviour in allBehaviours)
+            else
             {
-                behaviour.enabled = true;
+                Time.timeScale = 1;
+                AudioListener.pause = false;
+                var allBehaviours = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
+                foreach (var behaviour in allBehaviours)
+                {
+                    behaviour.enabled = true;
+                }
             }
         }
     }

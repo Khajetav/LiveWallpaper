@@ -1926,15 +1926,15 @@ MonoBehaviour:
     IsUnlocked: 1
   - Name: Base
     Cost: 20
-    Image: {fileID: 21300000, guid: 2cd526d5e740eac4da9edbdae92fd628, type: 3}
+    Image: {fileID: 21300000, guid: 74f98e40a6e96f9409cd97c6b874c14c, type: 3}
     IsUnlocked: 0
   - Name: Fancy hat
     Cost: 20
-    Image: {fileID: 21300000, guid: 46fba640773c8c046a2ac02d262fb10a, type: 3}
+    Image: {fileID: 21300000, guid: 0285b1f25b1a1c946bedffe0fc16ca8c, type: 3}
     IsUnlocked: 0
   - Name: Tophat
     Cost: 20
-    Image: {fileID: 21300000, guid: dedb505b4f9a14e43b1f08d26ada7eb9, type: 3}
+    Image: {fileID: 21300000, guid: d3762704fcbb1ee438b8d3fc9a206f8f, type: 3}
     IsUnlocked: 0
   displayImage: {fileID: 544841202}
   nameText: {fileID: 1077417007}
@@ -2087,18 +2087,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AchievementsManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1969003897552849867, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
-      propertyPath: achievements.Array.data[1].imageAchievement
-      value: 
-      objectReference: {fileID: 21300000, guid: 2cd526d5e740eac4da9edbdae92fd628, type: 3}
-    - target: {fileID: 1969003897552849867, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
-      propertyPath: achievements.Array.data[7].imageAchievement
-      value: 
-      objectReference: {fileID: 21300000, guid: 46fba640773c8c046a2ac02d262fb10a, type: 3}
-    - target: {fileID: 1969003897552849867, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
-      propertyPath: achievements.Array.data[15].imageAchievement
-      value: 
-      objectReference: {fileID: 21300000, guid: dedb505b4f9a14e43b1f08d26ada7eb9, type: 3}
     - target: {fileID: 8743869393690302287, guid: d63cfd2ce28218841866ceb43659077a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

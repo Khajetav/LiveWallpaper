@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0285b1f25b1a1c946bedffe0fc16ca8c
+guid: 57956545046e4ac4eb979dc50744dae4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5092492510813655302
-    second: HattyHatnew_0
+      213: -7068218621520093355
+    second: Separator2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HattyHatnew_0
+      name: Separator2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 23
         y: 0
-        width: 64
-        height: 64
+        width: 430
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: afe6d97ea05d359b0800000000000000
-      internalID: -5092492510813655302
+      spriteID: 55f5e7ddc94a8ed90800000000000000
+      internalID: -7068218621520093355
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HattyHatnew_0: -5092492510813655302
+      Separator2_0: -7068218621520093355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

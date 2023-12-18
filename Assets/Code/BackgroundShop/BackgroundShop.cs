@@ -74,6 +74,7 @@ public class BackgroundShop : MonoBehaviour
         {
             achievementManager.UnlockAchievement("Background Keeper");
         }
+
         UpdateDisplay();
     }
 
@@ -110,7 +111,18 @@ public class BackgroundShop : MonoBehaviour
             achievementManager.UnlockAchievement("Back To The Roots");
         }
         Debug.Log("Current bg name: " + backgrounds[currentIndex].Name);
+        if (PlayerPrefs.HasKey("backgroundSwitches"))
+        {
+            PlayerPrefs.SetInt("backgroundSwitches", PlayerPrefs.GetInt("backgroundSwitches") + 1);
+            if (PlayerPrefs.GetInt("backgroundSwitches") == 5)
+                achievementManager.UnlockAchievement("This Or That");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("backgroundSwitches", 1);
+        }
         CallFadeIn();
+
 
 
     }

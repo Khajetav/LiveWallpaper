@@ -20,7 +20,7 @@ public class PetPet : MonoBehaviour
     // the heart that will pop out of the pet
     public GameObject heartPrefab;
     private float lastTapTime = 0f;
-    private float tapCooldown = 2f;
+    private float tapCooldown = 0f;
     public void Start()
     {
         currencyText.text = CurrencyHandler.LoadCurrency().ToString();
@@ -34,6 +34,14 @@ public class PetPet : MonoBehaviour
         if (Time.time - lastTapTime >= tapCooldown)
         {
             lastTapTime = Time.time;
+            if (PlayerPrefs.HasKey("heartsTotal"))
+            {
+                PlayerPrefs.SetInt("heartsTotal", PlayerPrefs.GetInt("heartsTotal") + 1);
+            }
+            else
+            {
+                PlayerPrefs.SetInt("heartsTotal", 1);
+            }
             int currency = CurrencyHandler.LoadCurrency();
             currency++;
             if (currency >= 10)

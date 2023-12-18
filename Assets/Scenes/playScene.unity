@@ -2065,7 +2065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062e2246481fc6043926d4fc7b3cf245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1562229813}
   speed: 50
   leftBoundary: {fileID: 656531493}
   rightBoundary: {fileID: 312667566}

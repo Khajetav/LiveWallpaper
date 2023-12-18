@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dedb505b4f9a14e43b1f08d26ada7eb9
+guid: d3762704fcbb1ee438b8d3fc9a206f8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7218629034000331544
-    second: Tophat_0
+      213: 3727307153836534432
+    second: Tophatnew_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tophat_0
+      name: Tophatnew_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81339e84cd8bd2460800000000000000
-      internalID: 7218629034000331544
+      spriteID: 0aae239bb1e0ab330800000000000000
+      internalID: 3727307153836534432
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tophat_0: 7218629034000331544
+      Tophatnew_0: 3727307153836534432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
