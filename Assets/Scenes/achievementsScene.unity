@@ -2882,6 +2882,7 @@ GameObject:
   - component: {fileID: 872700513}
   - component: {fileID: 872700519}
   - component: {fileID: 872700520}
+  - component: {fileID: 872700521}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2950,6 +2951,18 @@ MonoBehaviour:
   nightJunglePanel: {fileID: 522008503}
   thisOrThatPanel: {fileID: 410307982}
   wavePanel: {fileID: 1727754064}
+--- !u!114 &872700521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872700507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63729b88a8ddf3e489aceb893ee57606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &883488715
 GameObject:
   m_ObjectHideFlags: 0

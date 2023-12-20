@@ -6,6 +6,15 @@ using UnityEngine.UI;
 
 public class LiveWallpaperClass : MonoBehaviour
 {
+    private void Start()
+    {
+        string currentScenename = SceneManager.GetActiveScene().name;
+        if (currentScenename != "Animated")
+        {
+            PlayerPrefs.SetString("currentScene", currentScenename);
+            PlayerPrefs.Save();
+        }
+    }
     void Update()
     {
         #if !UNITY_EDITOR
@@ -17,7 +26,7 @@ public class LiveWallpaperClass : MonoBehaviour
         {
             if (currentSceneName == "Animated")
             {
-                SceneManager.LoadScene("mainScene");
+                SceneManager.LoadScene(PlayerPrefs.GetString("currentScene","mainScene"));
             }
         }
         else

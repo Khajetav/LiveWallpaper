@@ -14,8 +14,22 @@ public class StatisticsDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LoadStatistics();
+    }
+
+
+    public void DoNotPress()
+    {
+        achievementManager.UnlockAchievement("You Did It.");
+        PlayerPrefs.SetInt("DoNotPressCount", PlayerPrefs.GetInt("DoNotPressCount") + 1);
+        donotpressText.text = PlayerPrefs.GetInt("DoNotPressCount").ToString();
+        LoadStatistics();
+    }
+
+    public void LoadStatistics()
+    {
         // handle achievements
-        int totalAchievements=0;
+        int totalAchievements = 0;
         if (PlayerPrefs.GetInt("Back To The Roots") == 1)
             totalAchievements++;
         if (PlayerPrefs.GetInt("All Your Baseballs Are Belong To Us") == 1)
@@ -28,7 +42,7 @@ public class StatisticsDisplay : MonoBehaviour
             totalAchievements++;
         if (PlayerPrefs.GetInt("Wood Needed") == 1)
             totalAchievements++;
-        if (PlayerPrefs.GetInt("Go Green!") == 1)
+        if (PlayerPrefs.GetInt("You Did It.") == 1)
             totalAchievements++;
         if (PlayerPrefs.GetInt("Hat.") == 1)
             totalAchievements++;
@@ -89,15 +103,5 @@ public class StatisticsDisplay : MonoBehaviour
         {
             heartsText.text = PlayerPrefs.GetInt("heartsTotal").ToString();
         }
-
-
-    }
-
-
-    public void DoNotPress()
-    {
-        achievementManager.UnlockAchievement("You Did It.");
-        PlayerPrefs.SetInt("DoNotPressCount", PlayerPrefs.GetInt("DoNotPressCount") + 1);
-        donotpressText.text = PlayerPrefs.GetInt("DoNotPressCount").ToString();
     }
 }
