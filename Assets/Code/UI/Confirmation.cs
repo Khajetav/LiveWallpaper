@@ -5,7 +5,6 @@ using System.Collections;
 
 public class Confirmation : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private Button confirmButton;
     [SerializeField] private Button cancelButton;
     [SerializeField] private GameObject confirmationPanel;

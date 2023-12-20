@@ -94,8 +94,6 @@ public class AccessoryShop : MonoBehaviour
         UpdateDisplay();
     }
 
-
-
     public void PreviousAccessory()
     {
         currentIndex = (currentIndex - 1 + accessories.Count) % accessories.Count;
@@ -112,8 +110,6 @@ public class AccessoryShop : MonoBehaviour
         PlayerPrefs.SetString("accessory", accessories[currentIndex].Name);
         Debug.Log("Current acc name: " + accessories[currentIndex].Name);
         CallFadeIn();
-
-
     }
     public void CallFadeIn(Action onCompleted = null)
     {

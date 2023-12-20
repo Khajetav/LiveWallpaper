@@ -8,26 +8,14 @@ public class FPSManager : MonoBehaviour
     //public int targetFps = 30;
     private void Start()
     {
-        if (!PlayerPrefs.HasKey("menuFPS"))
-        {
-            PlayerPrefs.SetInt("menuFPS",60);
-        }
-
-        if (!PlayerPrefs.HasKey("wallpaperFPS"))
-        {
-            PlayerPrefs.SetInt("wallpaperFPS", 10);
-        }
-
         string currentScene = SceneManager.GetActiveScene().ToString();
-        if(currentScene != "Animated")
+        if (currentScene != "Animated")
         {
-
-            Application.targetFrameRate = PlayerPrefs.GetInt("menuFPS");
+            Application.targetFrameRate = PlayerPrefs.GetInt("menuFPS", 60);
         }
-        if(currentScene == "Animated")
+        if (currentScene == "Animated")
         {
-            Application.targetFrameRate = PlayerPrefs.GetInt("wallpaperFPS");
+            Application.targetFrameRate = PlayerPrefs.GetInt("wallpaperFPS", 10);
         }
-        
     }
 }

@@ -38,11 +38,6 @@ public class LiveWallpaperClass : MonoBehaviour
         }
 
     }
-
-    public void BackToTheMenu()
-    {
-        SceneManager.LoadScene("mainScene");
-    }
     public bool GetWallpaperState()
     {
         try
