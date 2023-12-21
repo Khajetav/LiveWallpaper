@@ -24,11 +24,6 @@ public class AccessoryShop : MonoBehaviour
     private int currentIndex = 0;
     void Start()
     {
-        if (!PlayerPrefs.HasKey("accessory"))
-        {
-            PlayerPrefs.SetString("accessory", "None");
-            PlayerPrefs.SetInt("accessory0", 1);
-        }
         currentIndex = PlayerPrefs.GetInt("selectedAccessoryIndex");
         //CurrencyHandler.SaveCurrency(100);
         //PlayerPrefs.DeleteAll();
@@ -137,7 +132,7 @@ public class AccessoryShop : MonoBehaviour
         // first time code
         if (!PlayerPrefs.HasKey("accessory"))
         {
-            PlayerPrefs.SetString("accessory", "None");
+            PlayerPrefs.SetString("accessory", "Bald");
             PlayerPrefs.SetInt("accessory0", 1);
         }
         Debug.Log(accessories[currentIndex].Name);
